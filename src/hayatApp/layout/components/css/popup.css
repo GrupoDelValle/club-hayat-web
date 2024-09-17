@@ -1,0 +1,9 @@
+.popup-enter {
+    transform: translateY(0);
+    transition: transform 0.3s ease-in-out;
+}
+
+.popup-exit {
+    transform: translateY(300%);
+    transition: transform 0.3s ease-in-out;
+}

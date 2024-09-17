@@ -1,0 +1,50 @@
+.LoadingScreen {
+  background-color: rgba(255,255,255,1);
+    /* background-color: #e0cda9;
+    background-image: radial-gradient(
+      circle,
+      #e0cda9, 
+      #f3eac0 10%, 
+      #e0cda9 20%, 
+      #c9b58a 35%, 
+      #d6c79f 100% 
+    ); */
+
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    opacity: 1;
+    animation: fadeOut 2s forwards; 
+  }
+
+  @media (max-width: 799px) {
+    .LoadingGif {
+      width: 100%;
+    }
+  }
+
+  @media (min-width: 800px) {
+    .LoadingGif {
+      width: 50%;
+    }
+  }
+  
+
+
+  .Content {
+    text-align: center;
+    padding: 20px;
+  }
+  
+  /* @keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+  } */
+
+  @keyframes fadeOut {
+    100% { opacity: 0; }
+    80% { opacity: 1; }
+  }

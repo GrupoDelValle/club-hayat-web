@@ -1,0 +1,35 @@
+.cardInfo {
+    position: relative;
+    width: calc(20.67% - 20px); /* Ajusta el ancho de cada tarjeta según el número total de tarjetas */
+    text-align: center;
+    transition: width 0.3s ease;
+    cursor: pointer;
+    align-content: end;
+    
+}
+
+.cardInfo:hover {
+    width: 100%;
+}
+
+.cardInfo:hover .title{
+    font-size: 10px;
+}
+
+.description {
+    display: none;
+    position: absolute;
+    /* bottom: -20px; */
+    left: 0;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.8); 
+    padding: 10px;
+    transition: all 0.3s ease;
+    text-align: center;
+}
+  
+.cardInfo:hover .description {
+    display: block;
+    font-size: 15px;
+    text-align: center;
+}

@@ -1,0 +1,44 @@
+.button {
+    position: relative;
+    padding: 8px 16px;
+    overflow: hidden;
+    border: none;
+    background: transparent;
+  }
+  
+  .button::before,
+  .button::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-color: transparent;
+    transition: transform 1s;
+  }
+  
+  .button::before {
+    top: 0;
+    transform-origin: right;
+  }
+  
+  .button::after {
+    bottom: 0;
+    transform-origin: left;
+  }
+  
+  .button:hover::before,
+  .button:hover::after {
+    transform: scaleX(0);
+  }
+  
+  .button.selected::before,
+  .button.selected::after {
+    background-color: #E3641A; /* Cambia el color de las líneas cuando el botón está seleccionado */
+    transform: scaleX(1);
+  }
+  
+  /* Agrega el efecto hover solo cuando el botón no esté seleccionado */
+  .button:not(.selected):hover::before,
+  .button:not(.selected):hover::after {
+    transform: scaleX(0);
+  }

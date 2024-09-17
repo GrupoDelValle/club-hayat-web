@@ -1,0 +1,14 @@
+.icon {
+    transition: transform 0.3s ease, fill 0.3s ease, stroke 0.3s ease;
+}
+  
+.tiktokHover:hover .icon {
+    transform: scale(1.2); 
+    fill: black;
+}
+
+.instagramHover:hover .icon {
+    transform: scale(1.2); 
+    fill: #e1306c;
+}
+

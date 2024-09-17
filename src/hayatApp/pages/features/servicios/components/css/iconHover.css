@@ -1,0 +1,9 @@
+.icon {
+    scale:1.4;
+    transition: transform 0.3s ease, fill 0.3s ease, stroke 0.3s ease;
+}
+  
+.arrow:hover .icon {
+    transform: scale(1.15); 
+    fill: url(#arrowRight);
+}

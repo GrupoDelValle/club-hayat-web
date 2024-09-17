@@ -1,0 +1,50 @@
+
+@keyframes heartbeat {
+  0%, 100% {
+    transform: scale(1);
+  }
+  10%, 20% {
+    transform: scale(1.2);
+  }
+  15%, 25% {
+    transform: scale(1);
+  }
+  30%, 40% {
+    transform: scale(1.2);
+  }
+  35%, 45% {
+    transform: scale(1);
+  }
+}
+.iconButton .transparent{
+  background-color: transparent;
+}
+
+.iconButton .color{
+  background-color: #25d366;
+}
+
+.iconButton {
+  animation: heartbeat 16s infinite;
+  /* animation-duration: 3s; */
+  /* transition-duration: 10s; */
+  /* transition-delay: 10s; */
+}
+
+.iconButton:hover {
+  /* background-color: #25d366; */
+  cursor: pointer;
+  /* transform: scale(1.2); */
+  
+  /* transition: all 0.3s ease-in-out; */
+  /* transition-duration: 1s; */
+}
+
+.icon {
+  color: #ffffff;
+}
+
+.delay1{
+  transition-delay: 10s;
+  animation-delay: 10s;
+}

@@ -1,0 +1,25 @@
+@keyframes slideRightToLeft {
+    0% {
+      transform: translateX(100%);
+    }
+    100% {
+      transform: translateX(0%);
+    }
+  }
+  
+  .fade-in-out {
+    animation: slideRightToLeft 3s linear infinite alternate;
+  }
+  
+  @keyframes slideHide {
+    0% {
+      transform: translateX(0%);
+    }
+    100% {
+      transform: translateX(-300%);
+    }
+  }
+  
+  .fade-in-out.hidden {
+    animation: slideHide 0.5s ease-in-out forwards;
+  }
