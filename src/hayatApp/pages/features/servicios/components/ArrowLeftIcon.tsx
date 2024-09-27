@@ -4,7 +4,7 @@ export const ArrowLeftIcon = ({ size = '30px', color = 'black' }) => (
   <svg style={{ filter: 'drop-shadow(2px 4px 4px black)' }}  className='icon' fill={color} width={size} height={size} viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
     <defs>
       <linearGradient id="arrowGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-        <stop offset="0%" stopColor="#E3641A" stopOpacity="1" />
+        <stop offset="0%" stopColor="#DCA65E" stopOpacity="1" />
       </linearGradient>
     </defs>
     <g data-name="Layer 2">

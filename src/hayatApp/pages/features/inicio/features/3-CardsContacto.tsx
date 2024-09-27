@@ -22,23 +22,6 @@ export const CardsContacto3: React.FC = () => {
                 lg: '22px',
                 xl: '24px'
             }} fontWeight={'bold'}> MAR DE EXPERIENCIAS </Typography>
-            
-            {/* {(width < 380) 
-            ? <Typography fontSize={{
-                xs: '11px',
-                sm: '14px',
-                md: '18px',
-                lg: '20px',
-                xl: '24px'
-              }}>Tendrás inumerables actividades para disfrutar</Typography>
-            : <Typography fontSize={{
-                xs: '11px',
-                sm: '14px',
-                md: '18px',
-                lg: '18px',
-                xl: '18px'
-              }} fontWeight={500}> Tendrás inumerables actividades de las cuales podrías disfrutar a los largo de tu estadía con nosotros </Typography>
-            } */}
 
         </Box>
         <Box height={'85%'} display={'flex'} flexDirection={'row'} alignItems='center' >

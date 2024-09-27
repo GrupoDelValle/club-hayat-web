@@ -1,7 +1,8 @@
-import { Box, Grid, IconButton } from "@mui/material";
+import { Box, IconButton } from "@mui/material";
+import Grid from "@mui/material/Grid2";
 import { useNavigate } from "react-router-dom";
 
-import { InfoFooter } from "../../../../ui/components/InfoFooter";
+//import { InfoFooter } from "../../../../ui/components/InfoFooter";
 import ConsultaAhoraSvg from "../../../../ui/components/TextSVG";
 
 import { countState } from "../../../../hooks/countState";
@@ -10,13 +11,15 @@ import { widthScreen } from "../../../../hooks/widthScreen";
 
 import { AnimatedTypography } from "../../shared/AnimatedTypography";
 
+import ImagenVistaConcierto from "../../../../../assets/vista-conciertos-mar.jpg"
+
 export const Servicios1: React.FC = () => {
 
-    const {height} = heightScreen();
+    //const {height} = heightScreen();
     const {width} = widthScreen();
 
     const first_content = (width < 380) ? 620 : 750;
-    const second_content = (height < 800) ? 800 * (20/100): 150;
+    //const second_content = (height < 800) ? 800 * (20/100): 150;
 
     const { count } = countState();
 
@@ -24,9 +27,12 @@ export const Servicios1: React.FC = () => {
 
     return (
         <Box
+            id="membresia"
             bgcolor={'rgba(38,38,38,0.4)'}
             overflow='hidden'
-            sx={{ 
+            sx={{
+                //backgroundImage: `url(${ImagenVistaConcierto})`,
+                backgroundColor: '#DCA65E',
                 backgroundAttachment: 'center',
                 backgroundRepeat: 'no-repeat',
                 backgroundSize: 'cover',
@@ -37,7 +43,7 @@ export const Servicios1: React.FC = () => {
             <Grid container display='flex' direction='row' >
                 <Grid height={first_content} width='12%' alignItems='center' justifyContent='center' display='flex' flexDirection='column' >
                     <AnimatedTypography fontWeight='bold' color='white' fontSize='20px' >{(count<1) ? '01' : `0${count}`}</AnimatedTypography>
-                    <Box sx={{transition: 'height 0.5s ease-out'}} color='#E3641A' border={3} width='1px' height={(count === 0) ? '16%' : `${16*count}%`} ></Box>
+                    <Box sx={{transition: 'height 0.5s ease-out'}} color='#DCA65E' border={3} width='1px' height={(count === 0) ? '16%' : `${16*count}%`} ></Box>
                     <Box sx={{transition: 'height 0.5s ease-out'}}  color='white' border={1} width='1px' height={(count === 0) ? '64%' : `${80-(16*count)}%`} ></Box>
                     <AnimatedTypography fontWeight='bold' color='white' fontSize='20px'>05</AnimatedTypography>
                 </Grid>
@@ -78,7 +84,7 @@ export const Servicios1: React.FC = () => {
                             lg: '45px',
                             xl: '45px'
                         }} 
-                        color='#E3641A'
+                        color='white'
                     > CON EL CONFORT QUE TU MERECES
                     </AnimatedTypography>
                     <AnimatedTypography 
@@ -135,29 +141,11 @@ export const Servicios1: React.FC = () => {
                         }} fontWeight='500'
                     > Disfruta de una variedad de comodidades de lujo, desde exquisitos restaurantes y bares frente al mar hasta comodas cabañas y tumbonas para descansar bajo el cálido sol tropical.
                     </AnimatedTypography>
-                    {/* <CustomRoundedButton
-                        background='#E3641A'
-                        onClick={()=>{}}
-                        className=""
-                    > <TextImage fontSize="20px" text="Registrate" backgroundPosition="bottom" urlImage={background1} />
-                    </CustomRoundedButton> */}
                     <IconButton  sx={{ height:'50px', width: (width < 550) ? '200px' : '280px', borderRadius:'30px' }}  onClick={()=>{navigate('/contacto#form-hayat')}}>
                         <ConsultaAhoraSvg style={{ width: 300, height: (width < 650) ? 30 : 40 }} />
                     </IconButton>
-                    
-                    {/* <Box margin={'12px 0 0 0'}>
-                        <CustomRoundedButton
-                            boxShadow=''
-                            background="white"
-                            onClick={()=>{navigate('/contacto#form-hayat')}}
-                            className=""
-                        >  <TextImage fontSize="22px" text="¡Consulta Ahora!" backgroundPosition="bottom 39% left 20% " />
-                        </CustomRoundedButton>
-                    </Box> */}
                 </Box>
             </Grid>
-
-            <InfoFooter sizeContent={second_content} />
         </Box>
     );
 }

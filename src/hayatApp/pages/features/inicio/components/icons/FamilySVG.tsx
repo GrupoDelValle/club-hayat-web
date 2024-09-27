@@ -1,5 +1,5 @@
 
-export const FamilySVG = ({ size = (window.screen.width < 600) ? '50px' : '90px', color = '#E3641A' }) => (
+export const FamilySVG = ({ size = (window.screen.width < 600) ? '50px' : '90px', color = '#DCA65E' }) => (
     <svg width={size} height={size} strokeWidth="0.5" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path fillRule="evenodd" clipRule="evenodd" d="M4.08835 7.13275C5.22958 7.13275 6.15473 6.2076 6.15473 5.06638C6.15473 3.92515 5.22958 3 4.08835 3C2.94712 3 2.02197 3.92515 2.02197 5.06638C2.02197 6.2076 2.94712 7.13275 4.08835 7.13275Z" stroke={color} strokeLinecap="round" strokeLinejoin="round"/>
         <path d="M5.24994 8.30673C4.39644 7.90982 3.39938 7.97611 2.60593 8.4825C1.81248 8.9889 1.33246 9.86531 1.33301 10.8066V13.1026H2.71059L3.16979 17.2353H5.00657L5.40056 13.6903" stroke={color} strokeLinecap="round" strokeLinejoin="round"/>

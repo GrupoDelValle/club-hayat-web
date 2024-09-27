@@ -55,7 +55,7 @@ export const cards: ExperienciasCardType[] = [
     {//Hotel
         id: '05',
         image: ImagenHoteles,
-        title:'Zona Hotelera',
+        title:'Zona Residencial',
         content: 'Disfruta de una estadía lujosa en nuestro hotel con más de 800 habitaciones y suits.',
         height: '170px',
         position: 'left'

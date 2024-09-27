@@ -70,19 +70,13 @@ export const SideBar: React.FC<SideBarProps> = ({ drawerWidth = 240, isOpen, han
                     
                     <ListItem disablePadding>
                         <ListItemButton component={NavLink} to="/servicios">
-                            <ListItemText primary="Servicios" />
-                        </ListItemButton>
-                    </ListItem>
-
-                    <ListItem disablePadding>
-                        <ListItemButton component={NavLink} to="/nosotros">
-                            <ListItemText primary="Nosotros" />
+                            <ListItemText primary="Membresía" />
                         </ListItemButton>
                     </ListItem>
 
                     <ListItem disablePadding>
                         <ListItemButton component={NavLink} to="/contacto">
-                            <ListItemText primary="Contácto" />
+                            <ListItemText primary="Contactoo" />
                         </ListItemButton>
                     </ListItem>
 

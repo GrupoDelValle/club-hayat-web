@@ -46,14 +46,14 @@ const CardOne:React.FC<CardOneProps> = ({position, height = '170px', img, title,
 
   return (
     <div style={{ padding: (width < 550) ? '0'  : '0 15px', height:`${height}`}} className="card">
-      <Box sx={{position:'relative'}} padding={{
+      <Box className="hover-box" sx={{position:'relative'}} padding={{
         xs: '0 45% 0 5%',
         sm: '0 45% 0 4%',
         md: '0 45% 0 4%',
         lg: '0 45% 0 4%',
         xl: '0 45% 0 4%',
         }} borderRadius=' 0 100px 100px 0' width={(width < 550) ? '100%' : '95%'} height='96%' bgcolor='#F8F8F8'
-        boxShadow='5px 5px 10px rgba(38, 38, 38, 0.7)'
+        //boxShadow='5px 5px 10px rgba(38, 38, 38, 0.7)'
       >
         
         <Typography fontWeight='bold' padding={'5% 0 0 0'} textAlign='left' fontFamily={'Montserrat'} sx={{ fontSize: {
@@ -63,7 +63,7 @@ const CardOne:React.FC<CardOneProps> = ({position, height = '170px', img, title,
         lg: '17px',
         xl: '17px'
         } }}> {title}</Typography>
-        <Box border={1.5} color='#E3641A' margin={'0 0 5% 0'}/>
+        <Box border={1.5} color='#DCA65E' margin={'0 0 5% 0'}/>
         <Typography textAlign='left' sx={{ mb: '15px', fontSize: {
           xs: '13.5px',
           sm: '10px',

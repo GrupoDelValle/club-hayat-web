@@ -1,5 +1,5 @@
 
-export const GrupoSVG = ({ size = (window.screen.width < 600) ? '50px' : '80px', color = '#E3641A' }) => (
+export const GrupoSVG = ({ size = (window.screen.width < 600) ? '50px' : '80px', color = '#DCA65E' }) => (
     <svg width={size} height={size} viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path fillRule="evenodd" clipRule="evenodd" d="M12.9565 31.3913C15.9821 31.3913 18.4348 28.9386 18.4348 25.9131C18.4348 22.8875 15.9821 20.4348 12.9565 20.4348C9.93097 20.4348 7.47827 22.8875 7.47827 25.9131C7.47827 28.9386 9.93097 31.3913 12.9565 31.3913Z" stroke={color} strokeLinecap="round" strokeLinejoin="round"/>
         <path d="M23.913 42.3488C22.6359 37.3404 18.1252 33.8356 12.9565 33.8356C7.78784 33.8356 3.27713 37.3404 2 42.3488" stroke={color} strokeLinecap="round" strokeLinejoin="round"/>

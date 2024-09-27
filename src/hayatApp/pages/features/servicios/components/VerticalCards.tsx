@@ -47,7 +47,7 @@ const CardOne:React.FC<CardOneProps> = ({height = '170px', index, img, title, co
           lg: '17px',
           xl: '17px'
           } }}> {index}</Typography>
-        <Box border={1.5} color='#E3641A' margin={'0 0 5% 0'}/>
+        <Box border={1.5} color='#DCA65E' margin={'0 0 5% 0'}/>
         <Typography textAlign='left' sx={{ mb: '15px', fontSize: {
           xs: '10px',
           sm: '10px',

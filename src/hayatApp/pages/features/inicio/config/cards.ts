@@ -48,7 +48,7 @@ export const cards: CardType[] = [
     },
     {//Hotel
         image: ImagenHoteles,
-        title:'Zona Hotelera',
+        title:'Zona Residencial',
         content: 'Disfruta de una estadía lujosa en nuestro hotel con más de 800 habitaciones con vistas panorámicas al mar, garantizando una experiencia única.',
         position: 'left',
         smallPosition: '40%'

@@ -1,5 +1,6 @@
 import { Facebook, Instagram, YouTube, LinkedIn, Send } from "@mui/icons-material";
-import { Box, CircularProgress, Grid, IconButton, TextField, Theme, Typography, useMediaQuery } from "@mui/material";
+import { Box, CircularProgress, IconButton, TextField, Theme, Typography, useMediaQuery, Button, Dialog, DialogActions, DialogContent, DialogContentText, DialogTitle } from "@mui/material";
+import Grid from "@mui/material/Grid2"
 import { useEffect, useState } from "react";
 import { useSelector } from "react-redux";
 
@@ -94,6 +95,8 @@ export const Footer = () => {
 
     const mailState = useSelector((state: RootState) => state.mail );
 
+    const [openModal, setOpenModal] = useState(false);
+
     //FORM DATA
     const { correoValid, isFormValid, correo,  onInputChange } = useForm({
         nombres: '',
@@ -102,11 +105,23 @@ export const Footer = () => {
         numero: '',
     }, formValidations);
 
-    useEffect(()=>{
+    /*useEffect(()=>{
         if( mailState.status === SendMailStatus.MailSended || mailState.status === SendMailStatus.MainFailed){
             handleShowAlert();
         }
-    })
+    })*/
+    useEffect(() => {
+        if (mailState.status === SendMailStatus.MailSended) {
+            setOpenModal(true); // Abre el modal cuando el envío es exitoso
+        } else if (mailState.status === SendMailStatus.MainFailed) {
+            //setOpenModal(true);
+            handleShowAlert(); // Muestra la alerta en caso de error
+        }
+        }, [mailState.status]);
+
+    const handleCloseModal = () => {
+        setOpenModal(false); // Cerrar el modal
+    };
 
     const isSmallScreen = useMediaQuery((theme: Theme) => theme.breakpoints.down('sm'));
     
@@ -253,7 +268,7 @@ export const Footer = () => {
                 </Box>
             </Box>
 
-            <Box padding={(isSmallScreen) ? '30px 0 0 0' : '60px 0 0 0'} sx={{width:(isSmallScreen) ? '100%' : '22%'}}>
+            <Box padding={(isSmallScreen) ? '30px 0 0 0' : '60px 0 0 0'} sx={{width:    (isSmallScreen) ? '100%' : '22%'}}>
                 <Grid container direction='column'>
                     <Typography color='#B8B8B8' fontSize={{xs: '20px',sm: '10px', md: '18px', lg: '15px',xl: '15px'}} paddingLeft={(width < 600) ? '60px' :'25px'} width='100%' sx={{ fontWeight: 'bold' }}>MAS INFORMACIÓN</Typography>
                     <Box justifyContent='center' display='flex' marginTop='10px'>
@@ -265,6 +280,19 @@ export const Footer = () => {
                     <Typography color='#B8B8B8' padding='20px 30px' sx={{ fontWeight: 'bold' }}>Mira nuestros últimos videos del proyecto</Typography>
                 </Grid>
             </Box>
+            <Dialog open={openModal} onClose={handleCloseModal}>
+                <DialogTitle>¡Gracias por tu interés!</DialogTitle>
+                <DialogContent>
+                <DialogContentText>
+                    Nos pondremos en contacto contigo lo más pronto posible.
+                </DialogContentText>
+                </DialogContent>
+                <DialogActions>
+                <Button onClick={handleCloseModal} color="primary">
+                    Cerrar
+                </Button>
+                </DialogActions>
+            </Dialog>
             {alert && (
                 <Alert
                     title= {(mailState.severity === 'error') 
