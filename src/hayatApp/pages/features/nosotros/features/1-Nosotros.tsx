@@ -77,8 +77,11 @@ export const Nosotros1 = () => {
                             </Box>
                             <Box m={'0 0 30px 0'} color={'white'} width={'80%'}>
                             <AnimatedTypography color={'white'} fontSize={fontTextSize} > 
-                                Grupo del Valle Investment & Holding es un grupo empresarial con altos estándares de gestión. Nuestra marca se posiciona como el catalizador que conecta los sueños 
-                                empresariales con el capital necesario, empoderando el éxito a través de una estrategia financiera efectiva: "Tu lo sueñas, nosotros lo creamos".
+                            Grupo del Valle, es un holding de inversión con capitales peruanos y extranjeros,
+con profesionales altamente especializados en desarrollos inmobiliarios de alta envergadura.
+Inmerso en desarrollos inmobiliarios, grandes eventos, turismo y entretenimiento de lujo,
+conecta sueños empresariales con capital para impulsar el éxito mediante
+estrategias financieras efectivas.
                             </AnimatedTypography>
                         </Box> 
                         </Box>
@@ -102,23 +105,26 @@ export const Nosotros1 = () => {
                             <img src={GrupoDelValleLogo} alt="Logo" style={{textAlign:'center', boxShadow: 'none', margin:'none', transition: 'box-shadow 3s', width: '63%'}} />        
                         </Box>
                         <Box color={'white'}>
-                            <AnimatedTypography margin='60px 0 0 40%' color={'white'} fontSize={fontTextSize} > Grupo del Valle Investment & Holding es un grupo empresarial con altos estándares de gestión. Nuestra marca se posiciona como el catalizador que conecta los sueños 
-                            empresariales con el capital necesario, empoderando el éxito a través de una estrategia financiera efectiva.</AnimatedTypography>
+                            <AnimatedTypography margin='60px 0 0 40%' color={'white'} fontSize={fontTextSize} > Grupo del Valle, es un holding de inversión con capitales peruanos y extranjeros,
+con profesionales altamente especializados en desarrollos inmobiliarios de alta envergadura.
+Inmerso en desarrollos inmobiliarios, grandes eventos, turismo y entretenimiento de lujo,
+conecta sueños empresariales con capital para impulsar el éxito mediante
+estrategias financieras efectivas.</AnimatedTypography>
                         </Box>
                         </Box>
                         
                     }
 
-                    <AnimatedTypography margin={ width<640 ? '20px 20% 0 10%' : '20px 20% 0 34%'} fontWeight={'bold'} fontSize={fontTextSize} color='#E3641A' > Encuéntranos en nuestras oficinas: </AnimatedTypography>
-                    {/* <AnimatedTypography textAlign='right' margin={'0 20% 0 0'} fontWeight={'bold'} fontSize={fontTextSize} color='#E3641A'> Ubicadas en: </AnimatedTypography> */}
+                    <AnimatedTypography margin={ width<640 ? '20px 20% 0 10%' : '20px 20% 0 34%'} fontWeight={'bold'} fontSize={fontTextSize} color='#DCA65E' > Encuéntranos en nuestras oficinas: </AnimatedTypography>
+                    {/* <AnimatedTypography textAlign='right' margin={'0 20% 0 0'} fontWeight={'bold'} fontSize={fontTextSize} color='#DCA65E'> Ubicadas en: </AnimatedTypography> */}
                     
-                    <AnimatedTypography margin={ width<640 ? '0 0 0 10%' : '0 0 0 34%'} padding={(width < 900) ? '0 3% 0 0' : '0 15% 0 0'} display='flex' alignItems='center' color={'white'} fontWeight={'500'} fontSize={fontDirectionsText} > <TripOrigin sx={{fontSize: '20px', mr:'10px', color:'#E3641A'}} /> Av. El Derby 254, Oficina 1704 Lima Central Tower, Surco - Lima  </AnimatedTypography>
+                    <AnimatedTypography margin={ width<640 ? '0 0 0 10%' : '0 0 0 34%'} padding={(width < 900) ? '0 3% 0 0' : '0 15% 0 0'} display='flex' alignItems='center' color={'white'} fontWeight={'500'} fontSize={fontDirectionsText} > <TripOrigin sx={{fontSize: '20px', mr:'10px', color:'#DCA65E'}} /> Av. El Derby 254, Oficina 1704 Lima Central Tower, Surco - Lima  </AnimatedTypography>
                     {width < 640 ? <Box height='1%' /> : null}
-                    <AnimatedTypography margin={ width<640 ? '0 0 0 10%' : '0 0 0 34%'} padding={(width < 900) ? '0 3% 0 0' : '0 15% 0 0'} display='flex' alignItems='center' color={'white'} fontWeight={'500'} fontSize={fontDirectionsText} > <TripOrigin sx={{fontSize: '20px', mr:'10px', color:'#E3641A'}} /> Av. Luis Montero 390, Urb. Miraflores, Castilla - Piura</AnimatedTypography>
+                    <AnimatedTypography margin={ width<640 ? '0 0 0 10%' : '0 0 0 34%'} padding={(width < 900) ? '0 3% 0 0' : '0 15% 0 0'} display='flex' alignItems='center' color={'white'} fontWeight={'500'} fontSize={fontDirectionsText} > <TripOrigin sx={{fontSize: '20px', mr:'10px', color:'#DCA65E'}} /> Av. Luis Montero 390, Urb. Miraflores, Castilla - Piura</AnimatedTypography>
                     {width < 640 ? <Box height='1%' /> : null}
-                    <AnimatedTypography margin={ width<640 ? '0 0 0 10%' : '0 0 0 34%'} padding={(width < 900) ? '0 3% 0 0' : '0 15% 0 0'} display='flex' alignItems='center' color={'white'} fontWeight={'500'} fontSize={fontDirectionsText} > <TripOrigin sx={{fontSize: '20px', mr:'10px', color:'#E3641A'}} /> Calle José Santos Chocano 617, Urb. Umacollo - Arequipa </AnimatedTypography>
+                    <AnimatedTypography margin={ width<640 ? '0 0 0 10%' : '0 0 0 34%'} padding={(width < 900) ? '0 3% 0 0' : '0 15% 0 0'} display='flex' alignItems='center' color={'white'} fontWeight={'500'} fontSize={fontDirectionsText} > <TripOrigin sx={{fontSize: '20px', mr:'10px', color:'#DCA65E'}} /> Calle José Santos Chocano 617, Urb. Umacollo - Arequipa </AnimatedTypography>
                     
-                    <Typography m={width<640 ? '20px 0 0 10%' : '20px 0 0 34.5%'} fontWeight={'bold'} fontSize={fontTextSize} color='#E3641A'> Contáctanos: </Typography>
+                    <Typography m={width<640 ? '20px 0 0 10%' : '20px 0 0 34.5%'} fontWeight={'bold'} fontSize={fontTextSize} color='#DCA65E'> Contáctanos: </Typography>
                     <Box m={ width<640 ? '5px 0 0 10%' : '5px 0 0 32%'} display={'flex'} flexDirection={(width<840) ? 'column' :'row'}>
                         <Box borderRadius='30px' height='40px' width={boxNumberPhoneSize} alignItems='center' justifyContent='center' display='flex'> 
                             <IconButton href="tel:967392794" >

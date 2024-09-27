@@ -1,5 +1,5 @@
 
-export const BienestarSVG = ({ size = (window.screen.width < 600) ? '50px' : '100px', color = '#E3641A' }) => (
+export const BienestarSVG = ({ size = (window.screen.width < 600) ? '50px' : '100px', color = '#DCA65E' }) => (
     <svg width={size} height={size} viewBox="0 0 60 60" strokeWidth="1.5" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path fillRule="evenodd" clipRule="evenodd" d="M38.3571 29.2364C38.3571 39.6955 30.123 48.1751 30.123 48.1751C30.123 48.1751 21.8916 39.6955 21.8916 29.2364C22.273 22.6909 24.8011 16.4536 29.0846 11.4897C29.3408 11.1796 29.7221 11 30.1244 11C30.5266 11 30.9079 11.1796 31.1641 11.4897C35.4482 16.4533 37.9763 22.6907 38.3571 29.2364V29.2364Z" stroke={color} strokeLinecap="round" strokeLinejoin="round"/>
         <path d="M36.3461 19.7398C38.7023 17.8355 41.3412 16.3104 44.1676 15.2196C44.5289 15.0806 44.9324 15.1035 45.2756 15.2826C45.6188 15.4617 45.8685 15.7796 45.9611 16.1554C46.8107 19.5888 48.491 28.5889 45.1143 35.8952C40.8556 45.1326 30.124 48.1749 30.124 48.1749" stroke={color} strokeLinecap="round" strokeLinejoin="round"/>

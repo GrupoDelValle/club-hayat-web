@@ -45,7 +45,7 @@ export let expCards: ExperienciasCardType[] = [
         position: 'center'
     },
     {   
-        title: 'Zona hotelera',
+        title: 'Zona Residencial',
         image: ImagenHoteles,
         rate: '5',
         position: 'center'

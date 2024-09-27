@@ -19,7 +19,7 @@ export const normalTheme = createTheme({
         mode: 'light',
         primary: {
             main: 'rgba(238, 238, 238, 0.4)',
-            light: '#E3641A',
+            light: '#DCA65E',
             dark: 'rgba(6, 45, 62, 0.7)',
             contrastText: '#F8F8F8'
 

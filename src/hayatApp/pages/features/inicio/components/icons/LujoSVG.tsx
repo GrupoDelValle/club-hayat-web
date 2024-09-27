@@ -1,5 +1,5 @@
 
-export const LujoSVG = ({ size = (window.screen.width < 600) ? '40px' : '80px', color = '#E3641A' }) => (
+export const LujoSVG = ({ size = (window.screen.width < 600) ? '40px' : '80px', color = '#DCA65E' }) => (
     <svg width={size} height={size} strokeWidth='1' viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path d="M26.81 8.98853H1.19751" stroke={color} strokeLinecap="round" strokeLinejoin="round"/>
         <path d="M8.96851 8.98968L14.0044 1.19312L19.0402 8.98968" stroke={color} strokeLinecap="round" strokeLinejoin="round"/>

@@ -12,6 +12,7 @@ import { TermsAndConditionsPage } from "../pages/extras/TermsAndConditionsPage";
 import { InformacionPage } from "../pages/extras/InformacionPage";
 import { PlanosMap } from "../pages/extras/Planos-Mapa";
 import { HayatTermsAndConditions } from "../pages/extras/HayatTermsAndConditions";
+import {Brochure} from "../pages/features/reserva/features/Brochure.tsx";
 
 
 export const HayatAppRoutes = () => {
@@ -29,8 +30,8 @@ export const HayatAppRoutes = () => {
       dispatch( changeIndex(2) );
     } else if (path === '/servicios'){
       dispatch( changeIndex(3) );
-    } else if (path === '/reserva'){
-      dispatch( changeIndex(4) );
+    }else if (path === '/brochure-departamentos'){
+      dispatch( changeIndex(5) );
     }
   }, [location, dispatch]);
 
@@ -42,14 +43,15 @@ export const HayatAppRoutes = () => {
           <Route path="/contacto" element={ <ContactoPage /> }  />
           <Route path="/nosotros" element={ <NosotrosPage /> } />
           <Route path="/servicios" element={ <ServiciosPage /> } />
-          <Route path="/reserva" element={ <ReservaPage /> } />
+          <Route path="/productos" element={ <ReservaPage /> } />
           <Route path='/informacion' element={<InformacionPage/>} />
+          <Route path='/brochure-departamentos' element={<Brochure/>} />
           
           {/* RUTAS EXTRA */}
           <Route path="/terminos-y-condiciones" element={ <TermsAndConditionsPage /> } />
           <Route path="/plano-hayat" element={ <PlanosMap/> }/>
           <Route path="/hayat-terminos-y-condiciones" element={ <HayatTermsAndConditions/> } />
-          <Route path='/*' element={ <Navigate to="/" /> } />
+          {/*<Route path='/*' element={ <Navigate to="/" /> } />*/}
       </Routes>
     )
   }

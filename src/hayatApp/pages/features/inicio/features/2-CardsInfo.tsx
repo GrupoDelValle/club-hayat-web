@@ -1,4 +1,5 @@
-import { Box, Grid, SvgIcon, Typography } from "@mui/material"
+import { Box, SvgIcon, Typography } from "@mui/material"
+import Grid from '@mui/material/Grid2';
 import { useState } from "react";
 import { infoCards } from "../config/info-cards";
 
@@ -29,8 +30,9 @@ export const CardsInfo2 = () => {
             width: '100%',
             height: (width < 980) ? (width < 600) ? '420px' :'500px' :'290px',
         }}
+        
     >
-    <Box mt= { width<600 ? '5%' : '2%'} ml='5%' width='90%' border={1} color={'#E3641A'} />
+    <Box mt= { width<600 ? '5%' : '2%'} ml='5%' width='90%' border={1} color={'#DCA65E'} />
     { (width < 980) 
         ? <Grid container width={'90%'} alignSelf='center' justifyContent='center' spacing={2}>
             {infoCards.map((data, index) => (
@@ -74,6 +76,6 @@ export const CardsInfo2 = () => {
             </Box>
           ))}
     </Box>}
-    <Box mt='2%' ml='5%' width='90%' border={1} color={'#E3641A'} />
+    <Box mt='2%' ml='5%' width='90%' border={1} color={'#DCA65E'} />
     </Box>
 }

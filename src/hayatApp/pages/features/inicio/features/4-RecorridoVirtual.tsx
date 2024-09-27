@@ -13,7 +13,8 @@ export const RecorridoVirtual4: React.FC = () => {
     const {width} = widthScreen();
 
     return (
-        <Box 
+        <Box
+            id="recorrido-virtual"
             sx={{ 
                 backgroundImage: fondo3d,
                 backgroundPosition:'center',

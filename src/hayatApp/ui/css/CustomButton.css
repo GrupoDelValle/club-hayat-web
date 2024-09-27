@@ -33,7 +33,7 @@
   
   .button.selected::before,
   .button.selected::after {
-    background-color: #E3641A; /* Cambia el color de las líneas cuando el botón está seleccionado */
+    background-color: #DCA65E; /* Cambia el color de las líneas cuando el botón está seleccionado */
     transform: scaleX(1);
   }
   

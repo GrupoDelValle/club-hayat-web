@@ -1,6 +1,7 @@
-import { Box, Grid, IconButton } from "@mui/material";
+import { Box, IconButton } from "@mui/material";
 
-import { InfoFooter } from "../../../../ui/components/InfoFooter";
+import Grid from '@mui/material/Grid2';
+
 import { heightScreen } from "../../../../hooks/heightScreen";
 // import { countState } from "../../../../hooks/countState";
 
@@ -9,6 +10,7 @@ import { widthScreen } from "../../../../hooks/widthScreen";
 import { useNavigate } from "react-router-dom";
 import ConsultaAhoraSvg from "../../../../ui/components/TextSVG";
 import { Room } from "@mui/icons-material";
+import ImagenPrincipal from "../../../../../assets/imagen-principal-hayat.jpg"
 
 export const InitPage1: React.FC = () => {
 
@@ -24,8 +26,11 @@ export const InitPage1: React.FC = () => {
 
     return (
         <Box
+            id="inicio"
             bgcolor={'rgba(38,38,38,0.4)'}
             sx={{ 
+                //backgroundImage: `url(${ImagenPrincipal})`,
+                backgroundColor: '#DCA65E',
                 backgroundAttachment: 'center',
                 backgroundRepeat: 'no-repeat',
                 backgroundSize: 'cover',
@@ -34,12 +39,6 @@ export const InitPage1: React.FC = () => {
             }}
         >
             <Grid container display='flex' direction='row' >
-                {/* <Grid height={first_content} width='12%' alignItems='center' justifyContent='center' display='flex' flexDirection='column' >
-                    <Typography fontWeight='bold' color='white' fontSize='20px' >{(count < 1) ? '01' : `0${count}`}</Typography>
-                    <Box sx={{transition: 'height 0.5s ease-out'}} color='#E3641A' border={3} width='1px' height={`${16*count}%`} ></Box>
-                    <Box sx={{transition: 'height 0.5s ease-out'}}  color='white' border={1} width='1px' height={`${80-(16*count)}%`} ></Box>
-                    <Typography fontWeight='bold' color='white' fontSize='20px'>05</Typography>
-                </Grid> */}
 
                 <Box height={first_content} width='90%' p='0 0 0 8%' >
                     <AnimatedTypography
@@ -146,7 +145,7 @@ export const InitPage1: React.FC = () => {
                     HAYAT CLUB los invita a vivir una experiencia nunca antes vista.
                     </AnimatedTypography>
                     {/* <CustomRoundedButton
-                        background='#E3641A'
+                        background='#DCA65E'
                         onClick={()=>{}}
                         className=""
                     > <TextImage fontSize="20px" text="Registrate" backgroundPosition="bottom" urlImage={background1} />
@@ -156,8 +155,6 @@ export const InitPage1: React.FC = () => {
                     </IconButton>
                 </Box>
             </Grid>
-
-            <InfoFooter sizeContent={second_content} />
         </Box>
     );
 }

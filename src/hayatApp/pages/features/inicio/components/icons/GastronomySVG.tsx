@@ -1,6 +1,6 @@
 
 
-export const GatronomySVG = ({ size = (window.screen.width < 600) ? '50px' : '100px', color = '#E3641A' }) => (
+export const GatronomySVG = ({ size = (window.screen.width < 600) ? '50px' : '100px', color = '#DCA65E' }) => (
     <svg width={size} height={size} strokeWidth='1.5' viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path d="M7.37342 42.2174C6.8808 42.2175 6.43679 42.5145 6.24861 42.9698C6.06043 43.425 6.16516 43.9488 6.51394 44.2967L8.94872 46.7315C9.17688 46.9591 9.48595 47.0869 9.8082 47.087H50.1915C50.5146 47.0876 50.8247 46.9597 51.0534 46.7315L53.4882 44.2967C53.8373 43.9485 53.9419 43.4241 53.7531 42.9686C53.5643 42.5131 53.1194 42.2165 52.6263 42.2174" stroke={color} strokeLinecap="round" strokeLinejoin="round"/>
         <path d="M2 42.2174H58" stroke={color} strokeLinecap="round" strokeLinejoin="round"/>
