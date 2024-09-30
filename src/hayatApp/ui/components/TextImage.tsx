@@ -2,15 +2,14 @@ import { useEffect, useState } from "react";
 import { bg_images } from "../../config/bg_options";
 import { AnimatedTypography } from "../../pages/features/shared/AnimatedTypography";
 
-interface TextImageProps{
+export interface TextImageProps{
     text: string;
-    backgroundPosition: string;
     fontSize?: string;
 }
 
 
 
-export const TextImage: React.FC<TextImageProps> = ({ fontSize = 'clamp(10px, 1vw, 15px)' , text, backgroundPosition}) => {
+export const TextImage: React.FC<TextImageProps> = ({ fontSize = 'clamp(10px, 1vw, 15px)' , text}) => {
 
     const [index, setIndex] = useState(-1);
     const [count, setCount] = useState(0);
@@ -43,7 +42,6 @@ export const TextImage: React.FC<TextImageProps> = ({ fontSize = 'clamp(10px, 1v
                 WebkitBackgroundClip: 'text',
                 MozTextFillColor: 'transparent',
                 WebkitTextFillColor: 'transparent',
-                backgroundPosition: backgroundPosition,
             }}
         >
             {text}

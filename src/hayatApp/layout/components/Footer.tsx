@@ -18,6 +18,8 @@ import { Alert } from "../../pages/features/contacto/features/components/CustomA
 import { alertSwap } from "../../pages/features/contacto/features/hooks/alertSwap";
 import { SendMailStatus } from "../../service/config";
 
+import ImageContact from "../../../assets/gracias-por-contactarnos.jpg"
+
 const Links = [
     () => {
         window.open('https://www.tiktok.com/@hayatclubpuntasal', '_blank');
@@ -114,8 +116,9 @@ export const Footer = () => {
         if (mailState.status === SendMailStatus.MailSended) {
             setOpenModal(true); // Abre el modal cuando el envío es exitoso
         } else if (mailState.status === SendMailStatus.MainFailed) {
-            //setOpenModal(true);
-            handleShowAlert(); // Muestra la alerta en caso de error
+            setOpenModal(true);
+            //handleCloseModal();
+            //handleShowAlert(); // Muestra la alerta en caso de error
         }
         }, [mailState.status]);
 
@@ -239,26 +242,15 @@ export const Footer = () => {
                 flexDirection={(width < 1030) 
                     ? (width < 600) ? 'row' : 'column' 
                     : 'row'}>
-                <Grid container sx={{pl: '15%'}} width='80%' direction='column'>
-                    <a href="/servicios" style={{fontSize:'20px', padding: '0 0 10px 0', color: '#B8B8B8', textDecoration: 'none'}}><Typography fontSize={fontInfoSize} sx={{ fontWeight: 'bold' }}>El proyecto</Typography> </a>
+                <Grid container sx={{pl: '15%'}} paddingTop='80px' width='80%' direction='column'>
                     <a href="/plano-hayat" style={{ padding: '0 0 10px 0', color: '#B8B8B8', textDecoration: 'none'}}><Typography fontSize={fontInfoSize} sx={{ fontWeight: 'bold' }}>Planimetría</Typography> </a>
                     {/* <a href="/" style={{ padding: '0 0 10px 0', color: '#B8B8B8', textDecoration: 'none'}}><Typography fontSize={fontInfoSize} sx={{ fontWeight: 'bold' }}>Canal</Typography> </a> */}
                     <a href="/nosotros" style={{ padding: '0 0 10px 0', color: '#B8B8B8', textDecoration: 'none'}}><Typography fontSize={fontInfoSize} sx={{ fontWeight: 'bold' }}>Nosotros</Typography> </a>
                     {/* <a href="https://linktr.ee/grupodelvalle" target="_blank" style={{ padding: '0 0 10px 0', color: '#B8B8B8', textDecoration: 'none'}}><Typography fontSize={fontInfoSize} sx={{ fontWeight: 'bold' }}>Redes</Typography> </a> */}
-                    <a href="/contacto" style={{padding: '0 0 10px 0', color: '#B8B8B8', textDecoration: 'none'}}><Typography fontSize={fontInfoSize} sx={{ fontWeight: 'bold' }}>Contáctanos</Typography> </a>
                     {/* <a href="/contacto" style={{ padding: '0 0 10px 0', color: '#B8B8B8', textDecoration: 'none'}}><Typography fontSize={fontInfoSize} sx={{ fontWeight: 'bold' }}>Informes</Typography> </a> */}
                     <a href="/hayat-terminos-y-condiciones" style={{padding: '0 0 10px 0', color: '#B8B8B8', textDecoration: 'none'}}><Typography fontSize={fontInfoSize} sx={{ fontWeight: 'bold' }}>Politica de privacidad</Typography> </a>
                     <a href="/informacion" style={{padding: '0 0 10px 0', color: '#B8B8B8', textDecoration: 'none'}}><Typography fontSize={fontInfoSize} sx={{ fontWeight: 'bold' }}>Informes</Typography> </a>
                 </Grid>
-                {/* <Grid container width={(width < 1030) 
-                    ? (width < 600) 
-                        ? '50%'
-                        : '80%'
-                    :'43%'} direction='column'>
-                    <a href="/nosotros" style={{padding: '0 0 10px 0', color: '#B8B8B8', textDecoration: 'none'}}><Typography fontSize={fontInfoSize} sx={{ fontWeight: 'bold' }}>Holding</Typography> </a>
-                    <a href="/nosotros" style={{padding: '0 0 10px 0', color: '#B8B8B8', textDecoration: 'none'}}><Typography fontSize={fontInfoSize} sx={{ fontWeight: 'bold' }}>Oficina</Typography> </a>
-                    <a style={{padding: '0 0 10px 0', color: '#484848', textDecoration: 'none'}}><Typography fontSize={fontInfoSize} sx={{ fontWeight: 'bold' }}>Precios</Typography> </a>
-                </Grid> */}
             </Grid>
 
             <Box flexDirection='column' display='flex' justifyContent='start' sx={{width: (isSmallScreen) ? '100%' : (width < 1450) ? '18%' : '17%' }}>
@@ -280,12 +272,27 @@ export const Footer = () => {
                     <Typography color='#B8B8B8' padding='20px 30px' sx={{ fontWeight: 'bold' }}>Mira nuestros últimos videos del proyecto</Typography>
                 </Grid>
             </Box>
-            <Dialog open={openModal} onClose={handleCloseModal}>
-                <DialogTitle>¡Gracias por tu interés!</DialogTitle>
+            <Dialog 
+            open={openModal} 
+            onClose={handleCloseModal}
+            sx={{
+                '& .MuiDialog-paper': {
+                  backgroundImage: `url(${ImageContact})`,
+                  backgroundSize: 'cover',
+                  backgroundPosition: 'center',
+                  color: 'white', // Ajusta el color del texto para que contraste con el fondo
+                },
+            }}
+            >
+                <DialogTitle width={'100%'} textAlign={'center'} color="black" sx={{ fontWeight: 'bold', fontSize: '1.5rem' }}>¡Gracias por tu interés!</DialogTitle>
                 <DialogContent>
-                <DialogContentText>
-                    Nos pondremos en contacto contigo lo más pronto posible.
-                </DialogContentText>
+                    <Grid container direction='column'>
+                        <Grid size={5}>
+                            <DialogContentText color="black" paddingTop={6} sx={{ fontWeight: 'bold', fontSize: '1.2rem' }}>
+                                Nos pondremos en contacto contigo lo más pronto posible.
+                            </DialogContentText>
+                        </Grid>
+                    </Grid>
                 </DialogContent>
                 <DialogActions>
                 <Button onClick={handleCloseModal} color="primary">

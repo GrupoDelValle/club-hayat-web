@@ -13,7 +13,12 @@ import { AnimatedTypography } from "../../shared/AnimatedTypography";
 
 import ImagenVistaConcierto from "../../../../../assets/vista-conciertos-mar.jpg"
 
-export const Servicios1: React.FC = () => {
+interface Contacto1Props {
+    showForm: boolean;
+    setShowForm: React.Dispatch<React.SetStateAction<boolean>>;
+}
+
+export const Servicios1: React.FC<Contacto1Props> = ({ showForm, setShowForm }) => {
 
     //const {height} = heightScreen();
     const {width} = widthScreen();
@@ -24,6 +29,10 @@ export const Servicios1: React.FC = () => {
     const { count } = countState();
 
     const navigate = useNavigate();
+
+    const handleCloseForm = (showForm : boolean) => {
+        setShowForm(!showForm);
+    };
 
     return (
         <Box
@@ -141,7 +150,7 @@ export const Servicios1: React.FC = () => {
                         }} fontWeight='500'
                     > Disfruta de una variedad de comodidades de lujo, desde exquisitos restaurantes y bares frente al mar hasta comodas cabañas y tumbonas para descansar bajo el cálido sol tropical.
                     </AnimatedTypography>
-                    <IconButton  sx={{ height:'50px', width: (width < 550) ? '200px' : '280px', borderRadius:'30px' }}  onClick={()=>{navigate('/contacto#form-hayat')}}>
+                    <IconButton  sx={{ height:'50px', width: (width < 550) ? '200px' : '280px', borderRadius:'30px' }}  onClick={()=>{handleCloseForm(showForm)}}>
                         <ConsultaAhoraSvg style={{ width: 300, height: (width < 650) ? 30 : 40 }} />
                     </IconButton>
                 </Box>

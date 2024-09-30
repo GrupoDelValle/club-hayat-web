@@ -1,7 +1,12 @@
 import { Box, Typography } from "@mui/material";
 import { CardsInfo } from "../components/Cards";
 
-export const CardsContacto3: React.FC = () => {
+interface Contacto1Props {
+    showForm: boolean;
+    setShowForm: React.Dispatch<React.SetStateAction<boolean>>;
+  }
+
+export const CardsContacto3: React.FC<Contacto1Props> = ({ showForm, setShowForm }) => {
 
     return (
     <Box 
@@ -25,7 +30,7 @@ export const CardsContacto3: React.FC = () => {
 
         </Box>
         <Box height={'85%'} display={'flex'} flexDirection={'row'} alignItems='center' >
-            <CardsInfo/>
+            <CardsInfo showForm={showForm} setShowForm={setShowForm}/>
         </Box>
 
     </Box>

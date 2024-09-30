@@ -1,4 +1,4 @@
-import { Box, Popover, Button, TextField } from '@mui/material';
+import { Box, Popover, Button, TextField, IconButton } from '@mui/material';
 import { InitPage1 } from './features/1-InitPage';
 import { CardsContacto3 } from './features/3-CardsContacto';
 import { HayatAppLayout } from '../../../layout/HayatAppLayout';
@@ -19,6 +19,8 @@ import SpeedDial from '@mui/material/SpeedDial';
 import ContactMailIcon from '@mui/icons-material/ContactMail';
 import { Contacto1 } from '../contacto/features/1-Contacto';
 
+import { WhatsApp } from '@mui/icons-material';
+
 export const InicioPage = () => {
   const { isLoading } = loadingScreenHook();
   const dispatch = useAppDispatch();
@@ -34,7 +36,7 @@ export const InicioPage = () => {
   }, [indexNav, dispatch]);
 
   const handleCloseForm = () => {
-    setAnchorEl(null); // Cierra el Popover
+    setAnchorEl(null);
   };
 
   const open = Boolean(anchorEl);
@@ -43,7 +45,7 @@ export const InicioPage = () => {
   return isLoading ? (
     <LoadingScreen />
   ) : (
-    <HayatAppLayout type="video">
+    <HayatAppLayout showForm={showForm} setShowForm={setShowForm} type="video">
       <Box
         flexDirection="column"
         justifyContent="top"
@@ -52,14 +54,29 @@ export const InicioPage = () => {
       >
         <InitPage1 />
         <CardsInfo2 />
-        <CardsContacto3 />
-        <Servicios1 />
+        <CardsContacto3 showForm={showForm} setShowForm={setShowForm}/>
+        <Servicios1 showForm={showForm} setShowForm={setShowForm}/>
         <Experiencias2 />
         <Reserva1 />
         <RecorridoVirtual4 />
         <MapaHayat />
+
+        <IconButton
+          onClick={()=>{window.open('https://wa.me/51967392794?text=Hola,%20quiero%20m%C3%A1s%20informaci%C3%B3n%20sobre%20las%20membres%C3%ADas.', '_blank')}}
+          className='iconButton delay1'
+          sx={{
+              position: 'fixed', // Mantiene la posición fija en la pantalla
+              bottom: '40px', // Se posiciona a 20px del borde inferior
+              right: '0px', // Se posiciona a 20px del borde derecho
+              width: '70px',
+              height: '70px',
+              m: '0 4vw 0 0',
+              zIndex: 1000,
+              backgroundColor: '#25d366', "&.MuiButtonBase-root:hover":{bgcolor:'#25d366'}}}>
+          <WhatsApp sx={{color: '#ffffff', width: '50px', height: '50px',}}/>
+        </IconButton>
         
-        {/* SpeedDial con acciones */}
+        {/* SpeedDial con acciones 
         <SpeedDial
           ariaLabel="Contáctanos"
           sx={{ position: 'fixed', bottom: 40, right: 40 }}
@@ -67,48 +84,27 @@ export const InicioPage = () => {
           onClick={() => setShowForm((prev) => !prev)}
           key={'Contáctanos'}
         >
-        </SpeedDial>
+        </SpeedDial>*/}
         
         {/* Popover para el formulario */}
         {showForm && (
         <Box
           sx={{
             position: 'fixed',
-            bottom: 120, // Ubica el formulario sobre el botón
-            right: 40,
-            width: 300, // Ancho fijo
+            top: 110,
+            right: 0,
+            width: 300,
+            height: 500,
             padding: 2,
-            boxShadow: 3, // Sombra para darle un efecto flotante
-            backgroundColor: 'white', // Fondo blanco
+            boxShadow: 3,
+            backgroundColor: 'white',
             borderRadius: 2,
-            zIndex: 1000, // Se asegura de que el formulario quede por encima del contenido
+            zIndex: 1000,
+            overflow: 'auto', // Para agregar un scrollbar si el contenido crece
+            maxHeight: 600,
           }}
         >
-          {/*<form>
-            <TextField
-              label="Nombre"
-              type="text"
-              fullWidth
-              margin="dense"
-            />
-            <TextField
-              label="Correo Electrónico"
-              type="email"
-              fullWidth
-              margin="dense"
-            />
-            <TextField
-              label="Mensaje"
-              multiline
-              rows={3}
-              fullWidth
-              margin="dense"
-            />
-            <Button onClick={() => setShowForm(false)} color="primary" variant="contained" fullWidth>
-              Enviar
-            </Button>
-          </form>*/}
-          <Contacto1/>
+          <Contacto1 showForm={showForm} setShowForm={setShowForm}/>
         </Box>
       )}
       </Box>
