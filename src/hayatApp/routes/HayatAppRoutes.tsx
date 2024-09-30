@@ -40,18 +40,14 @@ export const HayatAppRoutes = () => {
       
       <Routes>
           <Route path="/" element={ <InicioPage /> } />
-          <Route path="/contacto" element={ <ContactoPage /> }  />
           <Route path="/nosotros" element={ <NosotrosPage /> } />
-          <Route path="/servicios" element={ <ServiciosPage /> } />
-          <Route path="/productos" element={ <ReservaPage /> } />
           <Route path='/informacion' element={<InformacionPage/>} />
-          <Route path='/brochure-departamentos' element={<Brochure/>} />
           
           {/* RUTAS EXTRA */}
           <Route path="/terminos-y-condiciones" element={ <TermsAndConditionsPage /> } />
           <Route path="/plano-hayat" element={ <PlanosMap/> }/>
           <Route path="/hayat-terminos-y-condiciones" element={ <HayatTermsAndConditions/> } />
-          {/*<Route path='/*' element={ <Navigate to="/" /> } />*/}
+          <Route path='/*' element={ <Navigate to="/" /> } />
       </Routes>
     )
   }

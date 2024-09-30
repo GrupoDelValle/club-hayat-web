@@ -19,6 +19,11 @@ interface CardProps {
   onClick: ()=>void
 }
 
+interface Contacto1Props {
+  showForm: boolean;
+  setShowForm: React.Dispatch<React.SetStateAction<boolean>>;
+}
+
 const CardOne:React.FC<CardProps> = ({smallPosition, position, img, title, content, onClick}) => {
 
   const {width} = widthScreen();
@@ -73,7 +78,11 @@ const CardOne:React.FC<CardProps> = ({smallPosition, position, img, title, conte
   );
 }
 
-export const CardsInfo: React.FC = () => {
+export const CardsInfo: React.FC<Contacto1Props> = ({ showForm, setShowForm }) => {
+
+  const handleCloseForm = (showForm : boolean) => {
+    setShowForm(!showForm);
+  };
 
   const {width} = widthScreen();
   const navigate = useNavigate();
@@ -105,7 +114,7 @@ export const CardsInfo: React.FC = () => {
             img={card.image}
             position={card.position}
             smallPosition={card.smallPosition}
-            onClick={()=>{navigate('/contacto#form-hayat')}}
+            onClick={()=>{handleCloseForm(showForm)}}
           />)
         })}
       </Slider>

@@ -1,10 +1,10 @@
 import { AppBar, Box, Button, Grid2, IconButton, Toolbar, Typography } from '@mui/material';
 import Grid from '@mui/material/Grid2';
 import { MenuOutlined } from '@mui/icons-material';
-import { useEffect, useState } from 'react';
+import { useEffect, useState, useRef } from 'react';
 //import { useLocation } from 'react-router-dom';
 //import { useSelector } from 'react-redux';
-import { WhatsApp } from '@mui/icons-material';
+import EmailIcon from '@mui/icons-material/Email';
 import { CustomButton } from '../../ui/components';
 import { MenuOptions } from '../../ui/config/menu-options';
 import { CustomRoundedButton } from '../../ui/components/CustomRoundedButton';
@@ -20,16 +20,29 @@ import { useSectionObserver } from '../../hooks/useSectionObserver';
 
 interface NavBarProps {
     onToggleSidebar: ()=>void;
+    showForm: boolean;
+    setShowForm: React.Dispatch<React.SetStateAction<boolean>>;
 }
 
-export const NavBar: React.FC<NavBarProps> = ({onToggleSidebar}) => {
+export const NavBar: React.FC<NavBarProps> = ({onToggleSidebar, showForm, setShowForm}) => {
     const { width } = widthScreen();
     //const indexNav = useSelector((state: RootState) => state.nabBar.index);
     const sectionIds = MenuOptions.map(option => option.url);
     const activeSection = useSectionObserver(sectionIds);
     const [showAppBar, setShowAppBar] = useState(true);
 
+    const componentRef = useRef<HTMLDivElement | null>(null); // Crear referencia para el contenedor
+    const [componentWidth, setComponentWidth] = useState(0);
+
+    const handleCloseForm = (showForm : boolean) => {
+        setShowForm(!showForm);
+      };
+
     useEffect(() => {
+        if (componentRef.current) {
+            setComponentWidth(componentRef.current.clientWidth);
+          }
+
         const handleScroll = () => {
             if (window.scrollY > 150) {
                 setShowAppBar(false);
@@ -47,8 +60,6 @@ export const NavBar: React.FC<NavBarProps> = ({onToggleSidebar}) => {
     const handleButtonClick = (index: number) => {
         const option = MenuOptions[index];
         const sectionId = option.url; // El id de la sección debe coincidir con el URL de cada opción
-
-        console.log(index, option, sectionId);
 
         // Buscar el elemento en la página y hacer scroll
         const sectionElement = document.getElementById(sectionId);
@@ -120,25 +131,29 @@ export const NavBar: React.FC<NavBarProps> = ({onToggleSidebar}) => {
                             </Box>
                         </Box>
                     </Grid>
-                    <Grid size={6} justifyContent={'center'} justifyItems='center' display='flex' flexDirection='row' alignItems='center'>
+                    <Grid size={6} justifyContent={'center'} alignContent={'center'} justifyItems='center' display='flex' flexDirection='row' alignItems='center' height={'100%'}>
                         {width < 1180 ? null : MenuOptions.map((option, index) => (
                             activeSection === option.url
                             ? <CustomRoundedButton
                                 key={index} 
                                 className={`rounded-button ${activeSection === option.url ? 'selected-background' : ''}`}
-                                onClick={() => {
-                                    handleButtonClick(index);
-                                }}>
+                                onClick={() => {handleButtonClick(index)}}
+                                width={componentWidth}
+                                background=''
+                                >
                                     <TextImage text={option.title} />
                             </CustomRoundedButton>
-                            : <CustomButton
+                            : <CustomRoundedButton
                                 key={index} 
                                 className={`button ${activeSection === option.url ? 'selected-background' : ''}`}
                                 onClick={() => {
                                     handleButtonClick(index);
-                                }}>
+                                }}
+                                width={componentWidth}
+                                background=''
+                                >
                                 <Typography color="#0c4a97" fontSize= 'clamp(13px, 1vw, 18px)' fontWeight="fontWeightBold" bgcolor={'transparent'} >{option.title}</Typography>
-                            </CustomButton>
+                            </CustomRoundedButton>
                         ))}
                     </Grid>
                     <Grid size={3} justifyContent={'center'} justifyItems='center' display='flex' flexDirection='row' alignItems='center'>
@@ -151,7 +166,7 @@ export const NavBar: React.FC<NavBarProps> = ({onToggleSidebar}) => {
                             m: '0 3.5vw 0 0 ',
                             color: '#F8F8F8',
                             // background: '#DCA65E',
-                            background: '#25d366',
+                            background: '#0c4a97',
                             borderRadius: '30px',
                             height:(width < 424) ? '40px' : '30px',
                             // width: (width < 424) ? '30px' : '',
@@ -161,19 +176,19 @@ export const NavBar: React.FC<NavBarProps> = ({onToggleSidebar}) => {
                             },
                             fontSize: (width < 431) ? '12px' : '14px'
                         }}
-                        onClick={()=>{window.open('https://wa.me/51967392794?text=Hola,%20quiero%20m%C3%A1s%20informaci%C3%B3n%20sobre%20las%20membres%C3%ADas.', '_blank')}}
-                    ><Typography fontWeight={'bold'} textAlign={'center'} display={'flex'} justifyContent={'center'} >Conéctate <WhatsApp/></Typography>
+                        onClick={() => (handleCloseForm(showForm))}
+                    ><Typography fontWeight={'bold'} textAlign={'center'} display={'flex'} justifyContent={'center'} >Contáctanos <EmailIcon/></Typography>
                     </Button> 
                     : <IconButton
-                        onClick={()=>{window.open('https://wa.me/51967392794?text=Hola,%20quiero%20m%C3%A1s%20informaci%C3%B3n%20sobre%20las%20membres%C3%ADas.', '_blank')}}
+                        onClick={() => (handleCloseForm(showForm))}
                         className='iconButton delay1'
                         sx={{
                             // transition: 'top 0.7s ease-in-out',
                             // top: showAppBar ? 0 : '97vh',
                             // scale: showAppBar ? '1' : '1.3',
                             m: '0 4vw 0 0 ', 
-                            backgroundColor: '#25d366', "&.MuiButtonBase-root:hover":{bgcolor:'#25d366'}}}>
-                        <WhatsApp sx={{color: '#ffffff'}}/>
+                            backgroundColor: '#0c4a97', "&.MuiButtonBase-root:hover":{bgcolor:'#25d366'}}}>
+                        <EmailIcon sx={{color: '#ffffff'}}/>
                     </IconButton> }
                 </Grid>
                 </Grid>

@@ -23,9 +23,11 @@ interface AuthLayoutProps {
   children: ReactNode;
   type?: string;
   disablePanel?: boolean;
+  showForm: boolean;
+  setShowForm: React.Dispatch<React.SetStateAction<boolean>>;
 }
 
-export const HayatAppLayout: React.FC<AuthLayoutProps> = ({disablePanel=false, type='slider', children }) => {
+export const HayatAppLayout: React.FC<AuthLayoutProps> = ({disablePanel=false, type='slider', children, showForm, setShowForm }) => {
 
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
   const [showPanel, setShowPanel] = useState(false);
@@ -71,6 +73,8 @@ export const HayatAppLayout: React.FC<AuthLayoutProps> = ({disablePanel=false, t
           : <BackgroundNosotros images={nosotrosImages} interval={500} contentRef={contentRef} />*/}
         { ( isSidebarOpen ) ? <SideBar drawerWidth={ 230 } isOpen={ isSidebarOpen } handleSidebarToggle={handleSidebarToggle}/> : null }
         <NavBar
+          showForm={showForm}
+          setShowForm={setShowForm}
           onToggleSidebar={handleSidebarToggle}
         />
         <Box

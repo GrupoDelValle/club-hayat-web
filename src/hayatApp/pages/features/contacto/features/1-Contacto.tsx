@@ -21,6 +21,11 @@ interface FormValidation {
     [key: string]: [(value: string) => boolean, string];
   }
 
+interface Contacto1Props {
+  showForm: boolean;
+  setShowForm: React.Dispatch<React.SetStateAction<boolean>>;
+}
+
 const formValidations: FormValidation = {
   nombres: [(value) => value.length > 0, "El nombre es obligatorio para poder reconocerte"],
   apellidos: [(value) => value.length > 0, "El apellido es obligatorio para poder reconocerte"],
@@ -28,7 +33,7 @@ const formValidations: FormValidation = {
   numero: [(value) => validarNumero(value), "Ingrese un número válido"],
 };
 
-export const Contacto1 = () => {
+export const Contacto1: React.FC<Contacto1Props> = ({ showForm, setShowForm }) => {
   const { alert, handleCloseAlert, handleShowAlert } = alertSwap();
   const dispatch = useAppDispatch();
   const [formSubmitted, setFormSubmitted] = useState(false);
@@ -38,11 +43,16 @@ export const Contacto1 = () => {
     setAge(event.target.value as string);
   };
 
+  const handleCloseForm = (showForm : boolean) => {
+    setShowForm(!showForm);
+  };
+
   const mailState = useSelector((state: RootState) => state.mail);
 
   useEffect(() => {
     if (mailState.status === SendMailStatus.MailSended || mailState.status === SendMailStatus.MainFailed) {
       handleShowAlert();
+      handleCloseForm(showForm);
     }
   }, [mailState.status, handleShowAlert]);
 
@@ -88,7 +98,7 @@ export const Contacto1 = () => {
       width="100%"
     >
       <form onSubmit={onSubmit} className="animate__animated animate__fadeIn animate__faster">
-        <Box width="100%">
+        <Box width="100%" >
           <Box display="flex" flexDirection="column" margin="0 10px 0 13px">
             <CustomTextField
               key={"nombre"}
