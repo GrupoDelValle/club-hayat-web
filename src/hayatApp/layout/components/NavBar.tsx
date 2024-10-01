@@ -157,7 +157,7 @@ export const NavBar: React.FC<NavBarProps> = ({onToggleSidebar, showForm, setSho
                         ))}
                     </Grid>
                     <Grid size={3} justifyContent={'center'} justifyItems='center' display='flex' flexDirection='row' alignItems='center'>
-                    {(width>450) ? <Button
+                    {(width>850) ? <Button
                         className='iconButton transparent'
                         sx={{ 
                             // transition: 'top 0.7s ease-in-out',

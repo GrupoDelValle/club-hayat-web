@@ -1,11 +1,13 @@
 import { MailApi } from './config';
 import axios from 'axios'
 
-export const sendEmail = async ({nombres, apellidos, correo, numero}: MailData) => {
-    return axios.post(`${MailApi}/send`, { 
-        nombres: `${nombres} ${apellidos}`,
+export const sendEmail = async ({nombres, apellidos, correo, numero, razon}: MailData) => {
+    return axios.post(`${MailApi}/hayat/send`, { 
+        nombres: nombres,
+        apellidos: apellidos,
         email: correo,
-        numero: +numero
+        numero: +numero,
+        razon: razon,
     }).then(response => {
         return response.data;
     }).catch(error => {
