@@ -13,7 +13,7 @@ import { alertSwap } from "./hooks/alertSwap";
 
 import InputLabel from '@mui/material/InputLabel';
 import MenuItem from '@mui/material/MenuItem';
-import Select, { SelectChangeEvent } from '@mui/material/Select';
+import Select from '@mui/material/Select';
 import FormControl from '@mui/material/FormControl';
 
 // Validaciones para el formulario
@@ -37,11 +37,6 @@ export const Contacto1: React.FC<Contacto1Props> = ({ showForm, setShowForm }) =
   const { alert, handleCloseAlert, handleShowAlert } = alertSwap();
   const dispatch = useAppDispatch();
   const [formSubmitted, setFormSubmitted] = useState(false);
-  const [age, setAge] = useState('');
-
-  const handleChange = (event: SelectChangeEvent) => {
-    setAge(event.target.value as string);
-  };
 
   const handleCloseForm = (showForm : boolean) => {
     setShowForm(!showForm);
@@ -67,6 +62,7 @@ export const Contacto1: React.FC<Contacto1Props> = ({ showForm, setShowForm }) =
     apellidos,
     correo,
     numero,
+    razon,
     onInputChange,
   } = useForm(
     {
@@ -74,6 +70,7 @@ export const Contacto1: React.FC<Contacto1Props> = ({ showForm, setShowForm }) =
       apellidos: "",
       correo: "",
       numero: "",
+      razon: "",
     },
     formValidations
   );
@@ -85,7 +82,7 @@ export const Contacto1: React.FC<Contacto1Props> = ({ showForm, setShowForm }) =
 
     if (!isFormValid) return;
 
-    await dispatch(startSendingMail({ nombres, apellidos, correo, numero }));
+    await dispatch(startSendingMail({ nombres, apellidos, correo, numero, razon }));
   };
 
   return (
@@ -145,8 +142,8 @@ export const Contacto1: React.FC<Contacto1Props> = ({ showForm, setShowForm }) =
                 <Select
                     labelId="label-razon"
                     id="razon"
-                    value={age}
-                    onChange={handleChange}
+                    value={razon}
+                    onChange={(e) => onInputChange({ target: { name: "razon", value: e.target.value } })}
                     label="Razón"
                 >
                     <MenuItem value={'membresia'}>Membresía</MenuItem>

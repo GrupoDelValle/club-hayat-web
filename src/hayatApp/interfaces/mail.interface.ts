@@ -3,6 +3,7 @@ interface MailData{
     apellidos: string;
     correo: string;
     numero: number;
+    razon: string;
 }
 
 interface MailDataNovedades{

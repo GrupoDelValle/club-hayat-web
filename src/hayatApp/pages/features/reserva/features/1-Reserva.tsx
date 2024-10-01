@@ -56,7 +56,7 @@ export const Reserva1 = () => {
                             }}
                             textAlign={'center'}
                             color='white'
-                        > SUITES
+                        > SUITES Y PENTHOUSES
                         </AnimatedTypography>
                         <AnimatedTypography 
                             color='#F8F8F8'
@@ -118,7 +118,7 @@ export const Reserva1 = () => {
                             }}
                             textAlign={'center'}
                             color='white'
-                        > SUITES
+                        > SUITES Y PENTHOUSES
                         </AnimatedTypography>
                         <br/>
                         <AnimatedTypography 

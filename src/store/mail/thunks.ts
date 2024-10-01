@@ -9,12 +9,12 @@ export const checkingAuthentication = () => {
     }
 }
 
-export const startSendingMail = ({ nombres, apellidos, correo, numero }: MailData) => {
+export const startSendingMail = ({ nombres, apellidos, correo, numero, razon }: MailData) => {
     return async( dispatch: Dispatch ) => {
 
         dispatch( chekingMessage() );
 
-        const result = await sendEmail({nombres, apellidos, correo, numero })
+        const result = await sendEmail({nombres, apellidos, correo, numero, razon })
         
         if ( result.error === true ) return dispatch( failedMessage( result.message ) );
         
