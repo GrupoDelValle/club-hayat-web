@@ -2,7 +2,7 @@ import { AppBar, Box, Button, Grid2, IconButton, Toolbar, Typography } from '@mu
 import Grid from '@mui/material/Grid2';
 import { MenuOutlined } from '@mui/icons-material';
 import { useEffect, useState, useRef } from 'react';
-//import { useLocation } from 'react-router-dom';
+import { useLocation, useNavigate } from 'react-router-dom';
 //import { useSelector } from 'react-redux';
 import EmailIcon from '@mui/icons-material/Email';
 import { CustomButton } from '../../ui/components';
@@ -33,6 +33,8 @@ export const NavBar: React.FC<NavBarProps> = ({onToggleSidebar, showForm, setSho
 
     const componentRef = useRef<HTMLDivElement | null>(null); // Crear referencia para el contenedor
     const [componentWidth, setComponentWidth] = useState(0);
+    const navigate = useNavigate();
+    const location = useLocation();
 
     const handleCloseForm = (showForm : boolean) => {
         setShowForm(!showForm);
@@ -73,9 +75,13 @@ export const NavBar: React.FC<NavBarProps> = ({onToggleSidebar, showForm, setSho
     };
 
     const handleOnClickLogo = () => {
-        const headerElement = document.getElementById('inicio');
-        if (headerElement) {
-            headerElement.scrollIntoView({ behavior: 'smooth' });
+        if (location.pathname !== '/') {
+            navigate('/');
+        } else {
+            const headerElement = document.getElementById('inicio');
+            if (headerElement) {
+                headerElement.scrollIntoView({ behavior: 'smooth' });
+            }
         }
     };
 
