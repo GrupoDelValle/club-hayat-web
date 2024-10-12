@@ -17,7 +17,7 @@ export const InitPage1: React.FC = () => {
     const {height} = heightScreen();
     const {width} = widthScreen();
 
-    const first_content = (width < 870) ? 580 : 690;
+    const first_content = (width < 870) ? 580 : 950;
     const second_content = (height < 800) ? 170 : 140;
 
     // const { count } = countState();
@@ -35,12 +35,12 @@ export const InitPage1: React.FC = () => {
                 backgroundRepeat: 'no-repeat',
                 backgroundSize: 'cover',
                 padding: '80px 0 0 0',
-                width: '100%', 
+                width: '100%'
             }}
         >
             <Grid container >
 
-                <Box height={first_content} width='100%' p='0 0 0 8%' >
+                <Box height={first_content-30} width='100%' p='0 0 0 8%' >
                     <AnimatedTypography
                         fontFamily='Archivo Black, sans-serif' 
                         textAlign="center"
