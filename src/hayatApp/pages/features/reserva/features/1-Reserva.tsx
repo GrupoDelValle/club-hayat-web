@@ -12,7 +12,7 @@ import { CarruselFotos } from "./CarruselFotos";
 export const Reserva1 = () => {
     const {width} = widthScreen();
 
-    const first_content = (width < 380) ? 620 : 750;
+    const first_content = (width < 380) ? 620 : 900;
     
     const [count, setCount] = useState(0);
 
@@ -29,21 +29,15 @@ export const Reserva1 = () => {
                 zIndex:1,
                 backgroundRepeat: 'no-repeat',
                 backgroundSize: 'cover',
-                padding: '80px 0 0 0',
+                padding: '150px 0 0 0',
                 width: '100%',
             }}
         >
-        { (width < 980) 
-            ? <Box maxWidth={"980px"}>
+        { (width < 1200) 
+            ? <Box maxWidth={"980px"} height={500}>
                 <Grid container display='flex' direction='row' spacing={2} >
-                    <Grid height={first_content} width='12%' alignItems='center' justifyContent='center' display='flex' flexDirection='column' size={2} >
-                        <AnimatedTypography fontWeight='bold' color='white' fontSize='20px' >{(count<1) ? '01' : `0${count}`}</AnimatedTypography>
-                        <Box sx={{transition: 'height 0.5s ease-out'}} color='#DCA65E' border={3} width='1px' height={(count === 0) ? '16%' : `${16*count}%`} ></Box>
-                        <Box sx={{transition: 'height 0.5s ease-out'}}  color='white' border={1} width='1px' height={(count === 0) ? '64%' : `${80-(16*count)}%`} ></Box>
-                        <AnimatedTypography fontWeight='bold' color='white' fontSize='20px'>05</AnimatedTypography>
-                    </Grid>
 
-                    <Grid paddingTop={12} width={'80%'} maxHeight={100} size={10}>
+                    <Grid height={first_content} paddingRight={2} paddingLeft={2} width={'100%'} size={12}>
                         <CarruselFotos/>
                         <AnimatedTypography 
                             fontFamily='Archivo Black'
@@ -89,19 +83,13 @@ export const Reserva1 = () => {
                 </Grid>
             </Box>
 
-                : <Grid container display='flex' direction='row' spacing={2} >
-                    <Grid height={first_content} width='12%' alignItems='center' justifyContent='center' display='flex' flexDirection='column' size={2} >
-                        <AnimatedTypography fontWeight='bold' color='white' fontSize='20px' >{(count<1) ? '01' : `0${count}`}</AnimatedTypography>
-                        <Box sx={{transition: 'height 0.5s ease-out'}} color='#DCA65E' border={3} width='1px' height={(count === 0) ? '16%' : `${16*count}%`} ></Box>
-                        <Box sx={{transition: 'height 0.5s ease-out'}}  color='white' border={1} width='1px' height={(count === 0) ? '64%' : `${80-(16*count)}%`} ></Box>
-                        <AnimatedTypography fontWeight='bold' color='white' fontSize='20px'>05</AnimatedTypography>
-                    </Grid>
+                : <Grid container display='flex' direction='row' alignContent={'center'} spacing={10} >
 
-                    <Grid paddingTop={12} width={'60%'} maxHeight={100} size={8}>
+                    <Grid height={first_content} paddingLeft={10} paddingTop={2} width={'60%'} maxHeight={100} size={10}>
                         <CarruselFotos/>
                     </Grid>
 
-                    <Grid paddingTop={12}  width={'25%'}  size={2} >
+                    <Grid height={first_content} paddingTop={12}  width={'25%'}  size={2} >
                         <br/>
                         <br/>
                         <br/>

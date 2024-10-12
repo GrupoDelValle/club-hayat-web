@@ -90,10 +90,10 @@ export const NavBar: React.FC<NavBarProps> = ({onToggleSidebar, showForm, setSho
             position='fixed'
             sx={{ 
                 transition: 'top 0.7s ease-in-out',
-                /*top: (showAppBar) ? 0 : '-120px',*/
+                //top: (showAppBar) ? 0 : '-120px',
                 left: 0,
                 right: 0,
-                bgcolor: 'white',
+                bgcolor: 'transparent',
                 width: '100%',
                 height: {
                     xs: '80px',
@@ -115,17 +115,17 @@ export const NavBar: React.FC<NavBarProps> = ({onToggleSidebar, showForm, setSho
                 }} width={'100%'} container direction='row' justifyContent='space-between' alignItems='center'>
                     <Grid size={3}>
                         <Box height='60px' justifyItems='center' display='flex' flexDirection='row' alignItems='center'>
-                            {(width < 1180)
-                            ? <IconButton onClick={handleToggleSidebar} sx={{ alignContent: 'center', width: '40px', height: '40px', background: 'rgba(238,238,238,0.9)'}}> 
+                            
+                            <IconButton onClick={handleToggleSidebar} sx={{ alignContent: 'center', width: '40px', height: '40px', background: 'rgba(238,238,238,0.9)'}}> 
                                 <MenuOutlined sx={{color:'#DCA65E'}}  />
                             </IconButton>
-                            : <Box width={(width < 431) ? '' : {
+                            <Box width={(width < 431) ? '' : {
                                 md: '54px',
                                 lg: '120px',
-                                xl: '200px' }} /> }
+                                xl: '200px' }} />
                             <Box display='flex' justifyContent='end' color={'red'} height='100%' width={
-                                (width < 935) 
-                                    ? (width < 400)
+                                (width < 1180) 
+                                    ? (width < 1150)
                                         ? '45vw'
                                         : showAppBar ? '50vw' : '5vw'
                                     : '100%'} sx={{ transition: 'width  0.7s ease-in-out' }} >
@@ -136,31 +136,6 @@ export const NavBar: React.FC<NavBarProps> = ({onToggleSidebar, showForm, setSho
                                 </Button>
                             </Box>
                         </Box>
-                    </Grid>
-                    <Grid size={6} justifyContent={'center'} alignContent={'center'} justifyItems='center' display='flex' flexDirection='row' alignItems='center' height={'100%'}>
-                        {width < 1180 ? null : MenuOptions.map((option, index) => (
-                            activeSection === option.url
-                            ? <CustomRoundedButton
-                                key={index} 
-                                className={`rounded-button ${activeSection === option.url ? 'selected-background' : ''}`}
-                                onClick={() => {handleButtonClick(index)}}
-                                width={componentWidth}
-                                background=''
-                                >
-                                    <TextImage text={option.title} />
-                            </CustomRoundedButton>
-                            : <CustomRoundedButton
-                                key={index} 
-                                className={`button ${activeSection === option.url ? 'selected-background' : ''}`}
-                                onClick={() => {
-                                    handleButtonClick(index);
-                                }}
-                                width={componentWidth}
-                                background=''
-                                >
-                                <Typography color="#0c4a97" fontSize= 'clamp(13px, 1vw, 18px)' fontWeight="fontWeightBold" bgcolor={'transparent'} >{option.title}</Typography>
-                            </CustomRoundedButton>
-                        ))}
                     </Grid>
                     <Grid size={3} justifyContent={'center'} justifyItems='center' display='flex' flexDirection='row' alignItems='center'>
                     {(width>850) ? <Button

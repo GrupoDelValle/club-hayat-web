@@ -27,8 +27,8 @@ interface Contacto1Props {
 }
 
 const formValidations: FormValidation = {
-  nombres: [(value) => value.length > 0, "El nombre es obligatorio para poder reconocerte"],
-  apellidos: [(value) => value.length > 0, "El apellido es obligatorio para poder reconocerte"],
+  nombres: [(value) => value.length > 0, "Dato obligatorio"],
+  apellidos: [(value) => value.length > 0, "Dato obligatorio"],
   correo: [(value) => value.includes("@"), "Ingrese un correo válido"],
   numero: [(value) => validarNumero(value), "Ingrese un número válido"],
 };
@@ -91,7 +91,7 @@ export const Contacto1: React.FC<Contacto1Props> = ({ showForm, setShowForm }) =
       display="flex"
       flexDirection="column"
       alignItems="center"
-      bgcolor="rgba(248,248,248, 0.8)"
+      bgcolor="rgba(248,248,248, 0.2)"
       width="100%"
     >
       <form onSubmit={onSubmit} className="animate__animated animate__fadeIn animate__faster">
@@ -99,7 +99,7 @@ export const Contacto1: React.FC<Contacto1Props> = ({ showForm, setShowForm }) =
           <Box display="flex" flexDirection="column" margin="0 10px 0 13px">
             <CustomTextField
               key={"nombre"}
-              sx={{ margin: "20px 0 0 0", width: "96%" }}
+              sx={{ width: "96%" }}
               label="Nombres *"
               name="nombres"
               value={nombres}
@@ -137,8 +137,8 @@ export const Contacto1: React.FC<Contacto1Props> = ({ showForm, setShowForm }) =
               error={!!numeroValid && formSubmitted}
               helperText={formSubmitted ? numeroValid : null}
             />
-            <FormControl fullWidth sx={{ margin: "20px 0" }}>
-                <InputLabel id="label-razon">Razón</InputLabel>
+            <FormControl fullWidth sx={{ margin: "20px 0" , width: 250}}>
+                <InputLabel id="label-razon">Seleccione su interés</InputLabel>
                 <Select
                     labelId="label-razon"
                     id="razon"

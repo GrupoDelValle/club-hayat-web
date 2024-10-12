@@ -20,6 +20,8 @@ import ContactMailIcon from '@mui/icons-material/ContactMail';
 import { Contacto1 } from '../contacto/features/1-Contacto';
 
 import { WhatsApp } from '@mui/icons-material';
+import { NosotrosPage } from '../nosotros/NosotrosPage';
+import { PlanosMap } from '../../extras/Planos-Mapa';
 
 export const InicioPage = () => {
   const { isLoading } = loadingScreenHook();
@@ -53,13 +55,14 @@ export const InicioPage = () => {
         className="animate__animated animate__fadeIn animate__faster"
       >
         <InitPage1 />
-        <CardsInfo2 />
-        <CardsContacto3 showForm={showForm} setShowForm={setShowForm}/>
+        {/*<CardsContacto3 showForm={showForm} setShowForm={setShowForm}/>*/}
         <Servicios1 showForm={showForm} setShowForm={setShowForm}/>
         <Experiencias2 />
         <Reserva1 />
         <RecorridoVirtual4 />
         <MapaHayat />
+        <PlanosMap/>
+        <NosotrosPage/>
 
         <IconButton
           onClick={()=>{window.open('https://wa.me/51967392794?text=Hola,%20quiero%20m%C3%A1s%20informaci%C3%B3n%20sobre%20las%20membres%C3%ADas.', '_blank')}}
@@ -94,11 +97,11 @@ export const InicioPage = () => {
             top: 110,
             right: 0,
             width: 300,
-            height: 500,
+            height: 550,
             padding: 2,
             boxShadow: 3,
-            backgroundColor: 'white',
-            borderRadius: 2,
+            backgroundColor: 'rgba(255, 255, 255, 0.8)',
+            borderRadius: '16px',
             zIndex: 1000,
             overflow: 'auto', // Para agregar un scrollbar si el contenido crece
             maxHeight: 600,

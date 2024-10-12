@@ -1,20 +1,6 @@
-.rounded-button {
-    border-radius: 100px;
-}
-
-.rounded-button ::before {
-    border-radius: 100px;
-    color: red;
-    background: white;
-    &:hover::before{
-        background-color: #caffca; 
-    }
-}
-
 .rounded-button.selected-background {
     border-radius: 70px;
     padding: none;
-    height: 30px;
-    background: #E96417;
+    background: #DCA65E;
 } 
 
