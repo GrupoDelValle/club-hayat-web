@@ -61,7 +61,7 @@ export const InicioPage = () => {
         <Reserva1 />
         <RecorridoVirtual4 />
         <MapaHayat />
-        <PlanosMap/>
+        {<PlanosMap/>}
         <NosotrosPage/>
 
         <IconButton
@@ -78,16 +78,6 @@ export const InicioPage = () => {
               backgroundColor: '#25d366', "&.MuiButtonBase-root:hover":{bgcolor:'#25d366'}}}>
           <WhatsApp sx={{color: '#ffffff', width: '50px', height: '50px',}}/>
         </IconButton>
-        
-        {/* SpeedDial con acciones 
-        <SpeedDial
-          ariaLabel="Contáctanos"
-          sx={{ position: 'fixed', bottom: 40, right: 40 }}
-          icon={<ContactMailIcon />}
-          onClick={() => setShowForm((prev) => !prev)}
-          key={'Contáctanos'}
-        >
-        </SpeedDial>*/}
         
         {/* Popover para el formulario */}
         {showForm && (

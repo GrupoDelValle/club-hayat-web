@@ -43,7 +43,7 @@ const ConsultaAhoraSvg: React.FC<SvgIconProps> = (props) => {
                 <stop offset="100%" stopColor="#fcaf45" stopOpacity="1" />
             </linearGradient>
         </defs>
-        <rect width="100%" height="100%" rx="25" ry="50" fill="#DCA65E" mask="url(#text-mask)" 
+        <rect width="100%" height="100%" rx="25" ry="50" fill="white" mask="url(#text-mask)" 
          clipPath="url(#text-clip)"
          style={{ opacity: 1, transition: ' transform 0.3s ease-in-out'  }}/>
         </SvgIcon>

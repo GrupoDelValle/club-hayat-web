@@ -28,9 +28,7 @@ export const PlanosMap: React.FC = () => {
                   ? '45vw'
                   : '5vw'
               : '100%'} sx={{ transition: 'width  0.7s ease-in-out' }} >
-          <Button sx={{ ml:'1%', position:'absolute', top:'10px', left:0}} disableRipple color="inherit" aria-label="menu" onClick={handleOnClickLogo}>
-              <img src={logoHayat} alt="Logo" style={{ padding:'none', margin:'none', borderColor:'white', boxShadow: 'none', transition: 'box-shadow 0.1s', width: (width < 640) ? (width < 322) ? '5.5vw' : 35 : 50, borderRadius: '0' }} />
-          </Button>
+          
       </Box>
       <Typography position='relative' fontWeight='bold' fontSize={ (width < 650) ? '3.5vw' : '2vw' }textAlign='center' m='20px 10%' > HAYAT CLUB - PLANOS </Typography>
       <Box width='100%' height={(width < 500) ? '83vh' : '85vh'} overflow='hidden' >

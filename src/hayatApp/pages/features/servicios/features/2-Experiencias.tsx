@@ -12,8 +12,8 @@ export const Experiencias2 = () => {
     const {width} = widthScreen();
 
     return (
-    <Box  bgcolor='white' width='100%' height={ (width < 700) ? '1250px' : '1150px'} overflow='hidden' >
-    {(width > 700) 
+    <Box  bgcolor='white' width='100%' height={'1050px'} overflow='hidden' >
+    {/*(width > 700) 
     ? <Box m='50px 0 0 0' display='flex' width='100%' height='250px'      
         p={(width < 950 )
                 ? (width < 580)
@@ -45,7 +45,7 @@ export const Experiencias2 = () => {
             <VerticalCards/>
         </Box>
       </Box>
-    }
+    */}
 
     <Box m='0 0 10px 0' p=' 2vw' display='flex' alignItems='center' alignContent='center' >
         <Box border={1.5} color='#DCA65E' height={'0'} width={'100px'} />
@@ -54,28 +54,13 @@ export const Experiencias2 = () => {
     </Box>
 
     <Box sx={{
-        boxShadow: '10px 10px 15px rgb(0 0 0 / 26%)',
-        width: '95%',
-        m:'0 2.5%',
-        overflowY: 'scroll',
-        overflowX:'hidden',
-        '&::-webkit-scrollbar': {
-            width: '12px',
-        },
-        '&::-webkit-scrollbar-thumb': {
-            background: '#888',
-            borderRadius: '10px',
-        },
-        '&::-webkit-scrollbar-thumb:hover': {
-            background: '#555',
-        },
-        '&::-webkit-scrollbar-track': {
-            background: '#f1f1f1',
-            borderRadius: '10px',
-        },
+            boxShadow: '10px 10px 15px rgb(0 0 0 / 26%)',
+            width: '95%',
+            m: '0 2.5%',
+            height: 'auto', // Se ajusta automáticamente a la altura del contenido
+            overflow: 'visible',
         }}
          display='flex' alignContent='center' justifyContent='center' color='red' height= {(width < 700) ? '400px' : '600px'} >
-        {/* <MovingImageEffect/> */}
         <GridPhotos/>
     </Box>
 

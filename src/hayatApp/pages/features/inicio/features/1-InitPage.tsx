@@ -1,4 +1,4 @@
-import { Box, IconButton } from "@mui/material";
+import { Box } from "@mui/material";
 
 import Grid from '@mui/material/Grid2';
 
@@ -8,7 +8,6 @@ import { heightScreen } from "../../../../hooks/heightScreen";
 import { AnimatedTypography } from "../../shared/AnimatedTypography";
 import { widthScreen } from "../../../../hooks/widthScreen";
 import { useNavigate } from "react-router-dom";
-import ConsultaAhoraSvg from "../../../../ui/components/TextSVG";
 import { Room } from "@mui/icons-material";
 import ImagenPrincipal from "../../../../../assets/imagen-principal-hayat.jpg"
 
@@ -61,34 +60,6 @@ export const InitPage1: React.FC = () => {
                         color='#F8F8F8'
                     > ¡BIENVENIDO A UN MAR DE EXPERIENCIAS!
                     </AnimatedTypography>
-                    
-                    <Box m='15px 0 0 0' paddingLeft={0} display='flex'  alignItems='center' >
-                        <Room sx={{fontSize:{
-                            xs: '25px',
-                            sm: '25px',
-                            md: '40px',
-                            lg: '40px',
-                            xl: '40px'
-                        }, color: 'red'}} />
-                        <AnimatedTypography 
-                            color='#F8F8F8' 
-                            padding={{
-                                xs: '0 7vw 0 0',
-                                sm: '0 5vw 0 0',
-                                md: '0 24vw 0 0',
-                                lg: '0 20vw 0 0',
-                                xl: '0 25vw 0 0'
-                            }} 
-                            fontSize={{
-                                xs: '12px',
-                                sm: '12px',
-                                md: '19px',
-                                lg: '19px',
-                                xl: '20px'
-                            }} fontWeight='bold'
-                        >  PUNTA SAL, PERÚ
-                        </AnimatedTypography>
-                    </Box>
                 </Box>
             </Grid>
         </Box>

@@ -1,4 +1,4 @@
-import { Box } from '@mui/system';
+import { Box, width } from '@mui/system';
 import { Footer, NavBar, SideBar } from '../ui/components';
 import { ReactNode, useEffect, useRef, useState } from 'react';
 import './components/css/transitions.css';
@@ -18,6 +18,7 @@ import { useNavigate } from 'react-router-dom';
 //import { BackgroundNosotros } from './components/Background-Image';
 //import { nosotrosImages } from '../config/bg_nosotros';
 import imagenFondo from '../../assets/portada-web.jpg'
+import { widthScreen } from '../hooks/widthScreen';
 
 interface AuthLayoutProps {
   children: ReactNode;
@@ -33,6 +34,7 @@ export const HayatAppLayout: React.FC<AuthLayoutProps> = ({disablePanel=false, t
   const [showPanel, setShowPanel] = useState(false);
 
   const contentRef = useRef<HTMLDivElement>(null);
+  const { width } = widthScreen();
 
   const handleSidebarToggle = () => {
     setIsSidebarOpen(!isSidebarOpen);
@@ -71,11 +73,12 @@ export const HayatAppLayout: React.FC<AuthLayoutProps> = ({disablePanel=false, t
         {/*(type === 'slider') 
           ? <BackgroundSlider images={bg_images} interval={500} contentRef={contentRef}/>
           : <BackgroundNosotros images={nosotrosImages} interval={500} contentRef={contentRef} />*/}
-        { ( isSidebarOpen ) ? <SideBar drawerWidth={ 230 } isOpen={ isSidebarOpen } handleSidebarToggle={handleSidebarToggle}/> : null }
+        { ( isSidebarOpen ) ? <SideBar drawerWidth={ (width > 700) ? 350 : 250 } isOpen={ isSidebarOpen } handleSidebarToggle={handleSidebarToggle}/> : null }
         <NavBar
           showForm={showForm}
           setShowForm={setShowForm}
           onToggleSidebar={handleSidebarToggle}
+          isSidebarOpen={isSidebarOpen}
         />
         <Box
           component='main'

@@ -49,5 +49,5 @@ export let expCards: ExperienciasCardType[] = [
         image: ImagenHoteles,
         rate: '5',
         position: 'center'
-    },
+    }
 ]
