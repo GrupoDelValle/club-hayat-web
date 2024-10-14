@@ -8,6 +8,12 @@ import { AnimatedTypography } from "../../shared/AnimatedTypography";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { CarruselFotos } from "./CarruselFotos";
+import Departamentos from "./Departamentos";
+import Depa1 from "../assets/depa2.jpg";
+import Depa2 from "../assets/depa1.jpg";
+import Depa3 from "../assets/depa3.jpg";
+import Depa4 from "../assets/depa4.jpg";
+import Depa5 from "../assets/depa5.jpg";
 
 export const Reserva1 = () => {
     const {width} = widthScreen();
@@ -24,16 +30,16 @@ export const Reserva1 = () => {
             bgcolor={'rgba(38,38,38,0.3)'}
             // border={2}
             sx={{ 
-                backgroundColor: '#DCA65E',
+                backgroundColor: 'white',
                 backgroundAttachment: 'center',
                 zIndex:1,
                 backgroundRepeat: 'no-repeat',
                 backgroundSize: 'cover',
-                padding: '150px 0 0 0',
+                padding: '0 0 0 0',
                 width: '100%',
             }}
         >
-        { (width < 1200) 
+        {/* (width < 1200) 
             ? <Box maxWidth={"980px"} height={500}>
                 <Grid container display='flex' direction='row' spacing={2} >
 
@@ -76,9 +82,6 @@ export const Reserva1 = () => {
                             }} fontWeight='500'
                         > PUNTA SAL, PERÚ
                         </AnimatedTypography>
-                        {/*<IconButton  sx={{ height:'50px', width: (width < 550) ? '200px' : '280px', borderRadius:'30px'}}  onClick={()=>{navigate('/brochure-departamentos')}}>
-                            <VerBrochure style={{ width: 300, height: (width < 650) ? 30 : 40 }} />
-                        </IconButton>*/}
                     </Grid>
                 </Grid>
             </Box>
@@ -141,12 +144,10 @@ export const Reserva1 = () => {
                         </AnimatedTypography>
                         <br/>
                         <br/>
-                        {/*<IconButton  sx={{ height:'50px', width: (width < 550) ? '200px' : '280px', borderRadius:'30px'}}  onClick={()=>{navigate('/brochure-departamentos')}}>
-                            <VerBrochure style={{ width: 300, height: (width < 650) ? 30 : 40 }} />
-                        </IconButton>*/}
                     </Grid>
                 </Grid>
-        }
+        */}
+        <Departamentos/>
         </Box>
     );
 }
