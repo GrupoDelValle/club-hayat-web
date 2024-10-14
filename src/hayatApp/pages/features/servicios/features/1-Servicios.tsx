@@ -40,7 +40,7 @@ export const Servicios1: React.FC<Contacto1Props> = ({ showForm, setShowForm }) 
             bgcolor={'rgba(38,38,38,0.4)'}
             overflow='hidden'
             sx={{
-                //backgroundImage: `url(${ImagenVistaConcierto})`,
+                backgroundImage: `url(${ImagenVistaConcierto})`,
                 backgroundColor: 'white',
                 backgroundAttachment: 'center',
                 backgroundRepeat: 'no-repeat',
@@ -51,10 +51,10 @@ export const Servicios1: React.FC<Contacto1Props> = ({ showForm, setShowForm }) 
         >
             <Grid container display='flex' direction='row' >
                 <Grid height={first_content} width='12%' alignItems='center' justifyContent='center' display='flex' flexDirection='column' >
-                    <AnimatedTypography fontWeight='bold' color='#DCA65E' fontSize='20px' >{(count<1) ? '01' : `0${count}`}</AnimatedTypography>
+                    <AnimatedTypography fontWeight='bold' color='white' fontSize='20px' >{(count<1) ? '01' : `0${count}`}</AnimatedTypography>
                     <Box sx={{transition: 'height 0.5s ease-out'}} color='#DCA65E' border={3} width='1px' height={(count === 0) ? '16%' : `${16*count}%`} ></Box>
                     <Box sx={{transition: 'height 0.5s ease-out'}}  color='white' border={1} width='1px' height={(count === 0) ? '64%' : `${80-(16*count)}%`} ></Box>
-                    <AnimatedTypography fontWeight='bold' color='#DCA65E' fontSize='20px'>05</AnimatedTypography>
+                    <AnimatedTypography fontWeight='bold' color='white' fontSize='20px'>05</AnimatedTypography>
                 </Grid>
 
                 <Box height={first_content} width='88%'>
@@ -74,7 +74,7 @@ export const Servicios1: React.FC<Contacto1Props> = ({ showForm, setShowForm }) 
                             lg: '45px',
                             xl: '45px'
                         }} 
-                        color='#DCA65E'
+                        color='white'
                     > AMBIENTE PERFECTO
                     </AnimatedTypography>
                     <AnimatedTypography 
@@ -93,11 +93,11 @@ export const Servicios1: React.FC<Contacto1Props> = ({ showForm, setShowForm }) 
                             lg: '45px',
                             xl: '45px'
                         }} 
-                        color='#DCA65E'
+                        color='white'
                     > CON EL CONFORT QUE TU MERECES
                     </AnimatedTypography>
                     <AnimatedTypography 
-                        color='#DCA65E' 
+                        color='white' 
                         padding={{
                             xs: '40px 7vw 0 0',
                             sm: '50px 5vw 0 0',
@@ -115,7 +115,7 @@ export const Servicios1: React.FC<Contacto1Props> = ({ showForm, setShowForm }) 
                     > Se parte de nuestro exclusivo club, ''vive un mar de experiencias'' donde no podrás perderte de experiencias inolvidables.
                     </AnimatedTypography>
                     <AnimatedTypography 
-                        color='#DCA65E' 
+                        color='white' 
                         padding={{
                             xs: '0 7vw 0 0',
                             sm: '0 5vw 0 0',
@@ -133,7 +133,7 @@ export const Servicios1: React.FC<Contacto1Props> = ({ showForm, setShowForm }) 
                     > Ofrecemos un escape idílico con acceso privado a la suave arena dorada y las aguas cristalinas del océano en las playas del norte peruano.
                     </AnimatedTypography>
                     <AnimatedTypography 
-                        color='#DCA65E' 
+                        color='white' 
                         padding={{
                             xs: '0 7vw 30px 0',
                             sm: '0 5vw 20px 0',

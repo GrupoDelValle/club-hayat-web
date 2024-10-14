@@ -7,7 +7,7 @@ import { useSelector } from "react-redux";
 import { widthScreen } from "../../hooks/widthScreen";
 import { useForm } from "../../hooks/useForm";
 
-import logoHayat from '../../../assets/hayat-logo-2.webp';
+import logoHayat from '../../../assets/hayat-nameeee.webp';
 import logoGrupoDelValle from '../../../assets/grupo-del-valle-white.webp';
 
 import { TikTokIcon } from "./TikTokIcon";
@@ -173,7 +173,7 @@ export const Footer = () => {
                         direction='row'
                     >
                         <img loading="lazy" src={logoHayat} alt="Logo" style={{ boxShadow: 'none', margin:'none', transition: 'box-shadow 3s', width: 140}} />
-                        <Typography style={{ fontWeight:'500', alignContent:'end', color: '#A8A8A8', fontSize:'20px'}} >CLUB PUNTA SAL</Typography>
+                        {/*<Typography style={{ fontWeight:'500', alignContent:'end', color: '#A8A8A8', fontSize:'20px'}} >CLUB PUNTA SAL</Typography>*/}
                     </Grid>
                     <Typography m='0 0 15px 0' >Ingresa tu e-mail para poder recibir novedades</Typography>
                     <Box display='flex' width={'100%'} >
