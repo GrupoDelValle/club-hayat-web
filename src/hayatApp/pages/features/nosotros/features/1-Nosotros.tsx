@@ -1,4 +1,5 @@
-import { Box, Grid, IconButton, Typography } from "@mui/material";
+import { Box, IconButton, Typography } from "@mui/material";
+import Grid from "@mui/material/Grid2";
 import { Mail, Phone, TripOrigin } from "@mui/icons-material";
 
 import { widthScreen } from "../../../../hooks/widthScreen";
@@ -71,7 +72,7 @@ export const Nosotros1 = () => {
                     ? width < 640 
                         ? <Box justifyItems={'center'} alignItems='center' display={'flex'} flexDirection='column' >
                             <Box height={'100%'} width='32%' m={'100px 0 30px 0'} display='flex' justifyContent='center'>
-                                <Box height={'100%'}  width={'80%'} alignContent='center' display='flex' justifyContent='center' top={'-10px'} >
+                                <Box height={'100%'}  width={'100%'} alignContent='center' display='flex' justifyContent='center' top={'-10px'} >
                                     <img src={GrupoDelValleLogo} alt="Logo" style={{ textAlign:'center', boxShadow: 'none', margin:'none', height:'100%', maxWidth:'100%', width: '100%'}} />        
                                 </Box>
                             </Box>
@@ -101,8 +102,8 @@ estrategias financieras efectivas.
                         
                       </Box>
                     :   <Box display={'flex'} width={'85%'} flexDirection='row'>
-                        <Box width={'25%'} m='0 0 0 0' display='flex' justifyContent='start' position={'absolute'} left='20%' top='210px' >
-                            <img src={GrupoDelValleLogo} alt="Logo" style={{textAlign:'center', boxShadow: 'none', margin:'none', transition: 'box-shadow 3s', width: '63%'}} />        
+                        <Box width={'25%'} m='0 0 0 0' display='flex' justifyContent='start' left='20%' top='210px' >
+                            <img src={GrupoDelValleLogo} alt="Logo" style={{textAlign:'center', boxShadow: 'none', margin:'none', transition: 'box-shadow 3s', width: '25%', position: 'absolute'}} />        
                         </Box>
                         <Box color={'white'}>
                             <AnimatedTypography margin='60px 0 0 40%' color={'white'} fontSize={fontTextSize} > Grupo del Valle, es un holding de inversión con capitales peruanos y extranjeros,
@@ -166,8 +167,6 @@ estrategias financieras efectivas.</AnimatedTypography>
                 </Grid>
 
             </Grid>
-
-            {/* <InfoFooter sizeContent={second_content} /> */}
             </Box>
         </Box>
     );
