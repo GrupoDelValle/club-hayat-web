@@ -14,6 +14,7 @@ export const CarruselFotos = () => {
         {
           original: Depa1,
           thumbnail: Depa1,
+          description:  'aaaaa<br/>aeee',
         },
         {
           original: Depa2,

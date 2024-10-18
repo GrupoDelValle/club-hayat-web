@@ -85,9 +85,9 @@ export const InicioPage = () => {
           sx={{
             position: 'fixed',
             top: 110,
-            right: 0,
+            right: 20,
             width: 300,
-            height: 550,
+            height: 600,
             padding: 2,
             boxShadow: 3,
             backgroundColor: 'rgba(255, 255, 255, 0.8)',

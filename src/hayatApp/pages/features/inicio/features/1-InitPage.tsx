@@ -8,7 +8,6 @@ import { heightScreen } from "../../../../hooks/heightScreen";
 import { AnimatedTypography } from "../../shared/AnimatedTypography";
 import { widthScreen } from "../../../../hooks/widthScreen";
 import { useNavigate } from "react-router-dom";
-import { Room } from "@mui/icons-material";
 import ImagenPrincipal from "../../../../../assets/imagen-principal-hayat.jpg"
 
 export const InitPage1: React.FC = () => {

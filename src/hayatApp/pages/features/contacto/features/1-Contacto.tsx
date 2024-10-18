@@ -1,6 +1,7 @@
-import { Box, Button, CircularProgress, Typography } from "@mui/material";
+import { Box, Button, CircularProgress, Typography, Toolbar, IconButton } from "@mui/material";
 import { useEffect, useState } from "react";
 import { useSelector } from "react-redux";
+import { Close as CloseIcon } from "@mui/icons-material";
 
 import { CustomTextField } from "../../../../ui/components/CustomTextField";
 import { Alert } from "./components/CustomAlert";
@@ -96,6 +97,17 @@ export const Contacto1: React.FC<Contacto1Props> = ({ showForm, setShowForm }) =
     >
       <form onSubmit={onSubmit} className="animate__animated animate__fadeIn animate__faster">
         <Box width="100%" >
+          <Toolbar>
+            <IconButton
+                edge="start"
+                color="inherit"
+                onClick={() => handleCloseForm(showForm)}
+                aria-label="close"
+                sx={{ ml: 'auto', mr: 1, padding: 0 }}
+            >
+                <CloseIcon />
+            </IconButton>
+          </Toolbar>
           <Box display="flex" flexDirection="column" margin="0 10px 0 13px">
             <CustomTextField
               key={"nombre"}

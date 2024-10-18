@@ -6,17 +6,10 @@ import 'leaflet/dist/leaflet.css';
 import './components/leaflet-rewrite.css';
 
 import { widthScreen } from '../../hooks/widthScreen';
-import { useNavigate } from 'react-router-dom';
 
-import logoHayat from '../../../assets/hayat-logo.webp';
 import plano from '../../../assets/plano.png';
 
 export const PlanosMap: React.FC = () => {
-  
-  const navigate = useNavigate();
-  const handleOnClickLogo = ()=>{
-    navigate('/');
-  }
 
   const {width} = widthScreen();
 

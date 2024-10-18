@@ -117,9 +117,7 @@ estrategias financieras efectivas.</AnimatedTypography>
                     }
 
                     <AnimatedTypography margin={ width<640 ? '20px 20% 0 10%' : '20px 20% 0 34%'} fontWeight={'bold'} fontSize={fontTextSize} color='#DCA65E' > Encuéntranos en nuestras oficinas: </AnimatedTypography>
-                    {/* <AnimatedTypography textAlign='right' margin={'0 20% 0 0'} fontWeight={'bold'} fontSize={fontTextSize} color='#DCA65E'> Ubicadas en: </AnimatedTypography> */}
                     
-                    <AnimatedTypography margin={ width<640 ? '0 0 0 10%' : '0 0 0 34%'} padding={(width < 900) ? '0 3% 0 0' : '0 15% 0 0'} display='flex' alignItems='center' color={'white'} fontWeight={'500'} fontSize={fontDirectionsText} > <TripOrigin sx={{fontSize: '20px', mr:'10px', color:'#DCA65E'}} /> Av. El Derby 254, Oficina 1704 Lima Central Tower, Surco - Lima  </AnimatedTypography>
                     {width < 640 ? <Box height='1%' /> : null}
                     <AnimatedTypography margin={ width<640 ? '0 0 0 10%' : '0 0 0 34%'} padding={(width < 900) ? '0 3% 0 0' : '0 15% 0 0'} display='flex' alignItems='center' color={'white'} fontWeight={'500'} fontSize={fontDirectionsText} > <TripOrigin sx={{fontSize: '20px', mr:'10px', color:'#DCA65E'}} /> Av. Luis Montero 390, Urb. Miraflores, Castilla - Piura</AnimatedTypography>
                     {width < 640 ? <Box height='1%' /> : null}

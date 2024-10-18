@@ -1,9 +1,11 @@
-import ImagenZonaParque from '../../../../../assets/zona-parque-acuatico.webp'
-import ImagenZonaGeneral from '../../../../../assets/zona-general-hayat.webp'
+import ImagenZonaParque from '../../../../../assets/zona-parque-acuatico.jpg'
+import ImagenZonaGeneral from '../../../../../assets/zona-general-hayat.jpg'
 import ImagenZonaDescanso from '../../../../../assets/zona-descanso.webp'
 import ImagenZonaSpa from '../../../../../assets/zona-spa.webp'
-import ImagenZonaConciertos from '../../../../../assets/zona-conciertos.webp'
-import ImagenHoteles from '../../../../../assets/hoteles.webp'
+import ImagenZonaConciertos from '../../../../../assets/zona-conciertos.jpg'
+import ImagenHoteles from '../../../../../assets/zona-residencial.jpg'
+import ImagenZonaDeportiva from '../../../../../assets/zona-deportiva.jpg'
+import Comodidades from '../../../../../assets/comodidades.jpg'
 
 export interface ExperienciasCardType{
     rate: string;
@@ -47,6 +49,18 @@ export let expCards: ExperienciasCardType[] = [
     {   
         title: 'Zona Residencial',
         image: ImagenHoteles,
+        rate: '5',
+        position: 'center'
+    },
+    {   
+        title: 'Zona Deportiva',
+        image: ImagenZonaDeportiva,
+        rate: '5',
+        position: 'center'
+    },
+    {   
+        title: 'Todas las comodidades de un club',
+        image: Comodidades,
         rate: '5',
         position: 'center'
     }

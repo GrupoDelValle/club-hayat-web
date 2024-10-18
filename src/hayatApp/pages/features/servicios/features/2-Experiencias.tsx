@@ -12,7 +12,7 @@ export const Experiencias2 = () => {
     const {width} = widthScreen();
 
     return (
-    <Box  bgcolor='white' width='100%' height={'1050px'} overflow='hidden' >
+    <Box  bgcolor='white' width='100%' height={'100%'} overflow='hidden' >
     {/*(width > 700) 
     ? <Box m='50px 0 0 0' display='flex' width='100%' height='250px'      
         p={(width < 950 )
@@ -47,7 +47,7 @@ export const Experiencias2 = () => {
       </Box>
     */}
 
-    <Box m='0 0 10px 0' p=' 2vw' display='flex' alignItems='center' alignContent='center' >
+    <Box m='0 0 0 0' p=' 2vw' display='flex' alignItems='center' alignContent='center' >
         <Box border={1.5} color='#DCA65E' height={'0'} width={'100px'} />
         <Typography fontWeight='bold' fontSize='20px' p='10px 10px' >LAS MEJORES EXPERIENCIAS</Typography>
         <Typography fontWeight='500' p='10px 10px' >Disfruta de inumerables actividades a lo largo de tu estadía con nosotros</Typography>

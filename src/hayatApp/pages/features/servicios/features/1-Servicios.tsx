@@ -11,7 +11,7 @@ import { widthScreen } from "../../../../hooks/widthScreen";
 
 import { AnimatedTypography } from "../../shared/AnimatedTypography";
 
-import ImagenVistaConcierto from "../../../../../assets/vista-conciertos-mar.jpg"
+import ImagenVistaConcierto from "../../../../../assets/vista-ingreso-aereo.jpg"
 
 interface Contacto1Props {
     showForm: boolean;

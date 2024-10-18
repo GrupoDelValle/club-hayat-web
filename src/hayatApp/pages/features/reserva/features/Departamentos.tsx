@@ -52,7 +52,7 @@ const FilterComponent: React.FC = () => {
   };
 
   return (
-    <Box sx={{ padding: 4}}>
+    <Box sx={{ padding: 4, marginBottom: 20}}>
       <Grid container spacing={4} >
         {/* Filtros a la izquierda */}
         <Grid size={{xs:12, sm:4}}>
@@ -134,7 +134,7 @@ const FilterComponent: React.FC = () => {
 
         {/* Lista de departamentos a la derecha */}
         <Grid size={{xs:12, sm:8}}>
-            <Box sx={{ height: 450, maxHeight: 450, overflowY: 'auto', border: '1px solid #ccc', boxShadow: 3, borderRadius: 2 }}>
+            <Box sx={{ height: 550, maxHeight: 550, overflowY: 'auto', border: '1px solid #ccc', boxShadow: 3, borderRadius: 2 }}>
                 <ImageList cols={1} gap={16} >
                     {apartments
                     .filter(apartment => selectedTipologias === 0 || apartment.tipology === selectedTipologias)
@@ -160,6 +160,7 @@ const FilterComponent: React.FC = () => {
                         </ImageListItem>
                     ))}
                 </ImageList>
+                
             </Box>
         </Grid>
       </Grid>

@@ -174,7 +174,9 @@ export const NavBar: React.FC<NavBarProps> = ({onToggleSidebar, showForm, setSho
                             "&.MuiButtonBase-root:hover": { 
                                 backgroundColor: "#DCA65E",
                             },
-                            fontSize: (width < 431) ? '12px' : '14px'
+                            fontSize: (width < 431) ? '12px' : '14px',
+                            position: 'fixed',
+                            right: 0,
                         }}
                         onClick={() => (handleCloseForm(showForm))}
                     ><Typography fontWeight={'bold'} textAlign={'center'} display={'flex'} justifyContent={'center'} >Contáctanos <EmailIcon/></Typography>

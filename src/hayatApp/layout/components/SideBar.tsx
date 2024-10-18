@@ -3,7 +3,7 @@ import { useRef, useEffect, useState } from 'react';
 import { MenuOptions } from '../../ui/config/menu-options';
 import { Close as CloseIcon, Facebook, Instagram, YouTube, LinkedIn } from "@mui/icons-material";
 import Grid from "@mui/material/Grid2"
-import { IconButton,Typography } from "@mui/material";
+import { IconButton } from "@mui/material";
 import { TikTokIcon } from "./TikTokIcon";
 
 interface SideBarProps {
@@ -29,24 +29,24 @@ const Links = [
     },
 ]
 
-const sxIconButton ={
-    marginBottom: '5%',
+const sxIconButton = {
     bgcolor: '#303030',
     height: {
-        xs: '10vw',
-        sm: '6vw',
-        md: '33px',
-        lg: '3vw',
-        xl: '2.5vw'
+        xs: '6vw',   // Reducido de 8vw
+        sm: '4vw',   // Reducido de 5vw
+        md: '22px',  // Reducido de 28px
+        lg: '2vw',   // Reducido de 2.5vw
+        xl: '1.8vw'  // Reducido de 2vw
     },
     width: {
-        xs: '10vw',
-        sm: '6vw',
-        md: '33px',
-        lg: '3vw',
-        xl: '2.5vw'
-    }
-}
+        xs: '6vw',   // Reducido de 8vw
+        sm: '4vw',   // Reducido de 5vw
+        md: '22px',  // Reducido de 28px
+        lg: '2vw',   // Reducido de 2.5vw
+        xl: '1.8vw'  // Reducido de 2vw
+    },
+    borderRadius: '50%' // Mantiene la forma circular
+};
 
 export const SideBar: React.FC<SideBarProps> = ({ drawerWidth = 240, isOpen, handleSidebarToggle}) => {
     const [_, setWidthScreen] = useState(window.innerWidth);
