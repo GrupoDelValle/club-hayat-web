@@ -79,10 +79,10 @@ export const Nosotros1 = () => {
                             <Box m={'0 0 30px 0'} color={'white'} width={'80%'}>
                             <AnimatedTypography color={'white'} fontSize={fontTextSize} > 
                             Grupo del Valle, es un holding de inversión con capitales peruanos y extranjeros,
-con profesionales altamente especializados en desarrollos inmobiliarios de alta envergadura.
-Inmerso en desarrollos inmobiliarios, grandes eventos, turismo y entretenimiento de lujo,
-conecta sueños empresariales con capital para impulsar el éxito mediante
-estrategias financieras efectivas.
+                            con profesionales altamente especializados en desarrollos inmobiliarios de alta envergadura.
+                            Inmerso en desarrollos inmobiliarios, grandes eventos, turismo y entretenimiento de lujo,
+                            conecta sueños empresariales con capital para impulsar el éxito mediante
+                            estrategias financieras efectivas.
                             </AnimatedTypography>
                         </Box> 
                         </Box>
@@ -101,17 +101,19 @@ estrategias financieras efectivas.
                         </Box>
                         
                       </Box>
-                    :   <Box display={'flex'} width={'85%'} flexDirection='row'>
-                        <Box width={'25%'} m='0 0 0 0' display='flex' justifyContent='start' left='20%' top='210px' >
-                            <img src={GrupoDelValleLogo} alt="Logo" style={{textAlign:'center', boxShadow: 'none', margin:'none', transition: 'box-shadow 3s', width: '25%', position: 'absolute'}} />        
-                        </Box>
-                        <Box color={'white'}>
-                            <AnimatedTypography margin='60px 0 0 40%' color={'white'} fontSize={fontTextSize} > Grupo del Valle, es un holding de inversión con capitales peruanos y extranjeros,
-con profesionales altamente especializados en desarrollos inmobiliarios de alta envergadura.
-Inmerso en desarrollos inmobiliarios, grandes eventos, turismo y entretenimiento de lujo,
-conecta sueños empresariales con capital para impulsar el éxito mediante
-estrategias financieras efectivas.</AnimatedTypography>
-                        </Box>
+                    :   <Box display={'flex'} width={'100%'} flexDirection='row'>
+                            <Box width={'100%'} display='flex' justifyContent='start' left='20%' top='210px' >
+                                <img src={GrupoDelValleLogo} alt="Logo" style={{textAlign:'center', boxShadow: 'none', margin:'none', transition: 'box-shadow 3s', width: '80%'}} />        
+                            </Box>
+                            <Box color={'white'}>
+                                <AnimatedTypography color={'white'} fontSize={fontTextSize} > 
+                                    Grupo del Valle, es un holding de inversión con capitales peruanos y extranjeros,
+                                    con profesionales altamente especializados en desarrollos inmobiliarios de alta envergadura.
+                                    Inmerso en desarrollos inmobiliarios, grandes eventos, turismo y entretenimiento de lujo,
+                                    conecta sueños empresariales con capital para impulsar el éxito mediante
+                                    estrategias financieras efectivas.
+                                </AnimatedTypography>
+                            </Box>
                         </Box>
                         
                     }

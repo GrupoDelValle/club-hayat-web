@@ -61,7 +61,7 @@ export const InicioPage = () => {
         <Reserva1 />
         <RecorridoVirtual4 />
         <MapaHayat />
-        {<PlanosMap/>}
+        <PlanosMap/>
         <NosotrosPage/>
 
         <IconButton

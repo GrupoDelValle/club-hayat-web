@@ -23,12 +23,6 @@ export let expCards: ExperienciasCardType[] = [
         position: 'center'
     },
     {
-        title: 'Vista general Hayat',
-        image: ImagenZonaGeneral,
-        rate: '4.5',
-        position: 'center'
-    },
-    {
         title: 'Restaurant y zona de descanso frente al mar',
         image: ImagenZonaDescanso,
         rate: '4.7',
@@ -43,12 +37,6 @@ export let expCards: ExperienciasCardType[] = [
     {
         title: 'Zona de eventos',
         image: ImagenZonaConciertos,
-        rate: '5',
-        position: 'center'
-    },
-    {   
-        title: 'Zona Residencial',
-        image: ImagenHoteles,
         rate: '5',
         position: 'center'
     },

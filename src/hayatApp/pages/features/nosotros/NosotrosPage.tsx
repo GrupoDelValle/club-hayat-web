@@ -1,5 +1,4 @@
 import { Box } from '@mui/material';
-import { HayatAppLayout } from '../../../layout/HayatAppLayout';
 import { Nosotros1 } from './features/1-Nosotros';
 import { loadingScreenHook } from '../../../hooks/loadingWait';
 import { LoadingScreen } from '../../../ui/components/LoadingScreen';
