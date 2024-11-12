@@ -1,11 +1,8 @@
 import { Box } from "@mui/material";
-import { widthScreen } from "../../../../hooks/widthScreen";
 import Departamentos from "./Departamentos";
-import { AnimatedTypography } from "../../shared/AnimatedTypography";
 import logoHayatVillas from '../assets/hayat_villas_azul.png';
 
 export const Reserva1 = () => {
-    const {width} = widthScreen();
 
     return (
         <Box

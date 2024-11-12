@@ -13,7 +13,6 @@ import './components/css/popup.css';
 // import Banner from '../../assets/banner.png';
 // import { widthScreen } from '../hooks/widthScreen';
 // import ConsultaAhoraSvg from '../ui/components/TextSVG';
-import { useNavigate } from 'react-router-dom';
 //import { BackgroundVideo } from './components/Background-Video';
 //import { BackgroundNosotros } from './components/Background-Image';
 //import { nosotrosImages } from '../config/bg_nosotros';
@@ -47,14 +46,6 @@ export const HayatAppLayout: React.FC<AuthLayoutProps> = ({disablePanel=false, t
 
     return () => clearTimeout(timer);
   }, []);
-
-  const navigate = useNavigate();
-
-  const handleClose = () => {
-    setTimeout(() => {
-      setShowPanel(false);
-    }, 400);
-  };
 
   return (
     <Box

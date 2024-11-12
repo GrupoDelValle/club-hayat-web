@@ -41,7 +41,7 @@ export const NavBar: React.FC<NavBarProps> = ({onToggleSidebar, showForm, setSho
 
     const handleCloseForm = (showForm : boolean) => {
         setShowForm(!showForm);
-      };
+    };
 
     useEffect(() => {
         if (componentRef.current) {

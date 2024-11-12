@@ -1,7 +1,7 @@
 import { Box, Typography } from "@mui/material"
-import { HorizontalCards } from "../components/HorizontalCards";
+//import { HorizontalCards } from "../components/HorizontalCards";
 
-import { VerticalCards } from "../components/VerticalCards";
+//import { VerticalCards } from "../components/VerticalCards";
 import { widthScreen } from "../../../../hooks/widthScreen";
 import { GridPhotos } from "../components/GridPhotos";
 

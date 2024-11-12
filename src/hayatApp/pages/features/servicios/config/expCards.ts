@@ -1,9 +1,7 @@
 import ImagenZonaParque from '../../../../../assets/zona-parque-acuatico.jpg'
-import ImagenZonaGeneral from '../../../../../assets/zona-general-hayat.jpg'
 import ImagenZonaDescanso from '../../../../../assets/zona-descanso.webp'
 import ImagenZonaSpa from '../../../../../assets/zona-spa.webp'
 import ImagenZonaConciertos from '../../../../../assets/zona-conciertos.jpg'
-import ImagenHoteles from '../../../../../assets/zona-residencial.jpg'
 import ImagenZonaDeportiva from '../../../../../assets/zona-deportiva.jpg'
 import Comodidades from '../../../../../assets/comodidades.jpg'
 
