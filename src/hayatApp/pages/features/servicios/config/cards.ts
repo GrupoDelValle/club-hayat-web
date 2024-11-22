@@ -1,13 +1,9 @@
 import ImagenYoga from '../../../../../assets/yoga.webp'
-import ImagenGastronomia from '../../../../../assets/gastronomia.webp'
 import ImagenSportWater from '../../../../../assets/caminata-marina.webp'
 import ImagenExtremeHayat from '../../../../../assets/extreme-hayat.webp'
 import ImagenBar from '../../../../../assets/bar.webp'
 import ImagenShowEspeciales from '../../../../../assets/show-especiales-card.webp'
 import ImagenParque from '../../../../../assets/parque-acuatico.webp'
-import ImagenHoteles from '../../../../../assets/hoteles.webp'
-import ImagenSpa from '../../../../../assets/zona-spa.webp'
-import ImagenOficina from '../../../../../assets/oficina.webp'
 
 export interface ExperienciasCardType{
     id: string;
@@ -20,14 +16,6 @@ export interface ExperienciasCardType{
 
 
 export const cards: ExperienciasCardType[] = [
-    {//comida
-        id: '01',
-        title: 'Gastronomía',
-        content: 'Experiencias culinarias frente al mar con fusión de sabores nacionales e internacionales.', 
-        image: ImagenGastronomia,
-        height: '170px',
-        position: 'center'
-    },
     {//bar
         id: '02',
         title: 'Discoteca',
@@ -49,30 +37,6 @@ export const cards: ExperienciasCardType[] = [
         image: ImagenParque,
         title:'Water Park',
         content: 'Disfruta de nuestro emocionante parque acuático con toboganes, piscinas y juegos interactivos, ideal para la diversión de toda la familia frente al mar.',
-        height: '170px',
-        position: 'center'
-    },
-    {//Hotel
-        id: '05',
-        image: ImagenHoteles,
-        title:'Zona Residencial',
-        content: 'Disfruta de una estadía lujosa en nuestro hotel con más de 800 habitaciones y suits.',
-        height: '170px',
-        position: 'left'
-    },
-    {//Spa y gym
-        id: '06',
-        image: ImagenSpa,
-        title:' Gym y Spa',
-        content: 'Relájate en nuestro spa, y mantén tu rutina de ejercicio en un gimnasio moderno.',
-        height: '170px',
-        position: 'center'
-    },
-    {//Sala de reunion
-        id: '06',
-        image: ImagenOficina,
-        title:'Salas de Reunión',
-        content: 'Espacio elegante para eventos corporativos y reuniones privadas.',
         height: '170px',
         position: 'center'
     },

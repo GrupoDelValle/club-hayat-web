@@ -1,4 +1,4 @@
-import { Box, Popover, Button, TextField, IconButton } from '@mui/material';
+import { Box, IconButton } from '@mui/material';
 import { InitPage1 } from './features/1-InitPage';
 import { CardsContacto3 } from './features/3-CardsContacto';
 import { HayatAppLayout } from '../../../layout/HayatAppLayout';
@@ -8,41 +8,29 @@ import { useEffect, useState } from 'react';
 import { RootState, useAppDispatch } from '../../../../store';
 import { useSelector } from 'react-redux';
 import { changeIndex } from '../../../../store/navbar/navBatSlice';
-import { CardsInfo2 } from './features/2-CardsInfo';
 import { MapaHayat } from './features/4-Maps-hayat';
 import { RecorridoVirtual4 } from './features/4-RecorridoVirtual';
 import { Servicios1 } from '../servicios/features/1-Servicios';
 import { Experiencias2 } from '../servicios/features/2-Experiencias';
-import { Reserva1 } from '../reserva/features/1-Reserva';
 
-import SpeedDial from '@mui/material/SpeedDial';
-import ContactMailIcon from '@mui/icons-material/ContactMail';
 import { Contacto1 } from '../contacto/features/1-Contacto';
 
 import { WhatsApp } from '@mui/icons-material';
 import { NosotrosPage } from '../nosotros/NosotrosPage';
 import { PlanosMap } from '../../extras/Planos-Mapa';
+import { HayatvillasPortada } from './features/HayatVillasportada';
+//import { CardsInfo2 } from './features/2-CardsInfo';
 
 export const InicioPage = () => {
   const { isLoading } = loadingScreenHook();
   const dispatch = useAppDispatch();
   const indexNav = useSelector((state: RootState) => state.nabBar.index);
 
-  // Estado para manejar el Popover
-  const [anchorEl, setAnchorEl] = useState<null | HTMLElement>(null);
-
   const [showForm, setShowForm] = useState(false);
 
   useEffect(() => {
     if (indexNav !== 0) dispatch(changeIndex(0));
   }, [indexNav, dispatch]);
-
-  const handleCloseForm = () => {
-    setAnchorEl(null);
-  };
-
-  const open = Boolean(anchorEl);
-  const id = open ? 'simple-popover' : undefined;
 
   return isLoading ? (
     <LoadingScreen />
@@ -55,22 +43,23 @@ export const InicioPage = () => {
         className="animate__animated animate__fadeIn animate__faster"
       >
         <InitPage1 />
-        {/*<CardsContacto3 showForm={showForm} setShowForm={setShowForm}/>*/}
         <Servicios1 showForm={showForm} setShowForm={setShowForm}/>
         <Experiencias2 />
-        <Reserva1 />
+        <HayatvillasPortada/>
+        <CardsContacto3 showForm={showForm} setShowForm={setShowForm}/>
+        {/*<CardsInfo2/>*/}
+        <PlanosMap/>
         <RecorridoVirtual4 />
         <MapaHayat />
-        <PlanosMap/>
         <NosotrosPage/>
 
         <IconButton
           onClick={()=>{window.open('https://wa.me/51967392794?text=Hola,%20quiero%20m%C3%A1s%20informaci%C3%B3n%20sobre%20las%20membres%C3%ADas.', '_blank')}}
           className='iconButton delay1'
           sx={{
-              position: 'fixed', // Mantiene la posición fija en la pantalla
-              bottom: '40px', // Se posiciona a 20px del borde inferior
-              right: '0px', // Se posiciona a 20px del borde derecho
+              position: 'fixed',
+              bottom: '40px',
+              right: '0px',
               width: '70px',
               height: '70px',
               m: '0 4vw 0 0',

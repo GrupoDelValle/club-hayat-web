@@ -4,10 +4,8 @@ interface MenuOption{
 }
 
 export const MenuOptions: MenuOption[] = [
-    //{title: 'INICIO', url: 'header' },
+    {title: 'Inicio', url: 'inicio' },
     {title: 'Membresía', url: 'membresia'},
-    {title: 'Suite', url: 'suite'},
+    {title: 'Lotes', url: 'lotes'},
     {title: 'Recorrido', url: 'recorrido-virtual'},
-    // {title: 'INFORMACIÓN', url: '/informacion' }
-    // {title: 'RESERVA', url: '/reserva'}
 ]

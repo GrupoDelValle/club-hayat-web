@@ -7,14 +7,14 @@ import './components/leaflet-rewrite.css';
 
 import { widthScreen } from '../../hooks/widthScreen';
 
-import plano from '../../../assets/plano.png';
+import plano from '../../../assets/plano.webp';
 
 export const PlanosMap: React.FC = () => {
 
   const {width} = widthScreen();
 
   return (
-    <Box color='black' border={1} width='100vw' >
+    <Box color='black' border={1} width='100vw' padding={(width < 640) ? 5 : 10}>
       <Box display='flex' justifyContent='end' color={'red'} height='100%' width={
           (width < 935) 
               ? (width < 400)
@@ -23,7 +23,7 @@ export const PlanosMap: React.FC = () => {
               : '100%'} sx={{ transition: 'width  0.7s ease-in-out' }} >
           
       </Box>
-      <Typography position='relative' fontWeight='bold' fontSize={ (width < 650) ? '3.5vw' : '2vw' }textAlign='center' m='20px 10%' > HAYAT CLUB - PLANOS </Typography>
+      <Typography position='relative' fontWeight='bold' fontSize={ (width < 650) ? '3.5vw' : '2vw' }textAlign='center' m='20px 10%' > HAYAT VILLAS - PRIMERA ETAPA </Typography>
       <Box width='100%' height={(width < 500) ? '83vh' : '85vh'} overflow='hidden' >
       <MapContainer
         center={[10,31]}
@@ -35,7 +35,7 @@ export const PlanosMap: React.FC = () => {
       >
         <ImageOverlay
           url={plano}
-          bounds={[[0,0],[80,250]]}
+          bounds={[[-5,30],[80, 200]]}
           interactive={true}
         />
       </MapContainer>

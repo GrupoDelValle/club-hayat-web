@@ -1,9 +1,9 @@
-import ImagenZonaParque from '../../../../../assets/zona-parque-acuatico.jpg'
+import ImagenZonaParque from '../../../../../assets/parques.webp'
 import ImagenZonaDescanso from '../../../../../assets/zona-descanso.webp'
 import ImagenZonaSpa from '../../../../../assets/zona-spa.webp'
-import ImagenZonaConciertos from '../../../../../assets/zona-conciertos.jpg'
-import ImagenZonaDeportiva from '../../../../../assets/zona-deportiva.jpg'
-import Comodidades from '../../../../../assets/comodidades.jpg'
+import ImagenZonaConciertos from '../../../../../assets/zona-conciertos.webp'
+import ImagenZonaDeportiva from '../../../../../assets/zona-deportiva.webp'
+import Comodidades from '../../../../../assets/comodidades.webp'
 
 export interface ExperienciasCardType{
     rate: string;

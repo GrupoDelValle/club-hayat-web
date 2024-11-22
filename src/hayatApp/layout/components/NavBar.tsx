@@ -5,17 +5,14 @@ import { useEffect, useState, useRef } from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
 //import { useSelector } from 'react-redux';
 import EmailIcon from '@mui/icons-material/Email';
-import { CustomButton } from '../../ui/components';
 import { MenuOptions } from '../../ui/config/menu-options';
-import { CustomRoundedButton } from '../../ui/components/CustomRoundedButton';
-import { TextImage } from '../../ui/components/TextImage';
 import '../../ui/css/CustomRoundedButton.css';
 import './css/beat.css';
 import './css/navBar.css';
 import { widthScreen } from '../../hooks/widthScreen';
 import nombreHayat from '../../../assets/hayat-name.webp';
+import nombreHayatBlanco from '../../../assets/hayat-nameeee.webp';
 import logoHayat from '../../../assets/hayat-logo.webp';
-import { RootState } from '../../../store';
 import { useSectionObserver } from '../../hooks/useSectionObserver';
 
 interface NavBarProps {
@@ -84,7 +81,6 @@ export const NavBar: React.FC<NavBarProps> = ({onToggleSidebar, showForm, setSho
             position='fixed'
             sx={{ 
                 transition: 'background-color 0.8s ease-in-out',
-                //top: (showAppBar) ? 0 : '-120px',
                 left: 0,
                 right: 0,
                 bgcolor: backgroundColor || 'transparent',
@@ -125,10 +121,10 @@ export const NavBar: React.FC<NavBarProps> = ({onToggleSidebar, showForm, setSho
                                         ? '45vw'
                                         : showAppBar ? '50vw' : '5vw'
                                     : '100%'} sx={{ transition: 'width 0.7s ease-in-out' }}>
-                                    <Button sx={{ height: '100%', paddingRight: '50px' }} disableRipple color="inherit" aria-label="menu" onClick={handleOnClickLogo}>
+                                    <Button sx={{ height: '100%', paddingRight: (width < 1400) ? (width < 640) ? '40px' : '40px' : '140px'  }} disableRipple color="inherit" aria-label="menu" onClick={handleOnClickLogo}>
                                         <img src={logoHayat} alt="Logo" style={{ padding: 'none', margin: 'none', borderColor: 'white', boxShadow: 'none', transition: 'box-shadow 0.1s', width: (width < 640) ? (width < 322) ? '5.5vw' : 35 : 70, borderRadius: '0' }} />
                                         <Box width={'0.7vw'} />
-                                        <img src={nombreHayat} alt="Logo" style={{ padding: 'none', margin: 'none', borderColor: 'white', boxShadow: 'none', transition: 'box-shadow 0.1s', width: (width < 640) ? (width < 322) ? '12vw' : 80 : 130, borderRadius: '0' }} />
+                                        <img src={(window.scrollY > 150) ? nombreHayat : nombreHayatBlanco} alt="Logo" style={{ padding: 'none', margin: 'none', borderColor: 'white', boxShadow: 'none', transition: 'box-shadow 0.1s', width: (width < 640) ? (width < 322) ? '12vw' : 80 : 130, borderRadius: '0' }} />
                                     </Button>
                                 </Box>
                             </>
@@ -146,9 +142,9 @@ export const NavBar: React.FC<NavBarProps> = ({onToggleSidebar, showForm, setSho
                                         : showAppBar ? '50vw' : '5vw'
                                     : '100%'} sx={{ transition: 'width 0.7s ease-in-out' }}>
                                     <Button sx={{ height: '100%', paddingRight: '50px' }} disableRipple color="inherit" aria-label="menu" onClick={handleOnClickLogo}>
-                                        <img src={logoHayat} alt="Logo" style={{ padding: 'none', margin: 'none', borderColor: 'white', boxShadow: 'none', transition: 'box-shadow 0.1s', width: (width < 640) ? (width < 322) ? '5.5vw' : 35 : 70, borderRadius: '0' }} />
+                                        <img src={logoHayat} alt="Logo" style={{ padding: 'none', margin: 'none', borderColor: 'white', boxShadow: 'none', transition: 'box-shadow 0.1s', width: (width < 840) ? (width < 322) ? '5.5vw' : 35 : 70, borderRadius: '0' }} />
                                         <Box width={'0.7vw'} />
-                                        <img src={nombreHayat} alt="Logo" style={{ padding: 'none', margin: 'none', borderColor: 'white', boxShadow: 'none', transition: 'box-shadow 0.1s', width: (width < 640) ? (width < 322) ? '12vw' : 80 : 130, borderRadius: '0' }} />
+                                        <img src={nombreHayat} alt="Logo" style={{ padding: 'none', margin: 'none', borderColor: 'white', boxShadow: 'none', transition: 'box-shadow 0.1s', width: (width < 840) ? (width < 322) ? '12vw' : 80 : 130, borderRadius: '0' }} />
                                     </Button>
                                 </Box>
                             </>
@@ -189,7 +185,7 @@ export const NavBar: React.FC<NavBarProps> = ({onToggleSidebar, showForm, setSho
                             // top: showAppBar ? 0 : '97vh',
                             // scale: showAppBar ? '1' : '1.3',
                             m: '0 4vw 0 0 ', 
-                            backgroundColor: '#0c4a97', "&.MuiButtonBase-root:hover":{bgcolor:'#25d366'}}}>
+                            backgroundColor: '#0c4a97', "&.MuiButtonBase-root:hover":{bgcolor:'#F8F8F8'}}}>
                         <EmailIcon sx={{color: '#ffffff'}}/>
                     </IconButton> }
                 </Grid>

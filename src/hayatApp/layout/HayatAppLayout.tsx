@@ -1,22 +1,10 @@
-import { Box, width } from '@mui/system';
+import { Box } from '@mui/system';
 import { Footer, NavBar, SideBar } from '../ui/components';
 import { ReactNode, useEffect, useRef, useState } from 'react';
 import './components/css/transitions.css';
-
-//import { bg_images } from '../config/bg_options';
 import './components/css/beat.css';
 import './components/css/popup.css';
-
-//import { BackgroundSlider } from './components/Background-Slider';
-// import { Button, IconButton } from '@mui/material';
-// import { Close } from '@mui/icons-material';
-// import Banner from '../../assets/banner.png';
-// import { widthScreen } from '../hooks/widthScreen';
-// import ConsultaAhoraSvg from '../ui/components/TextSVG';
-//import { BackgroundVideo } from './components/Background-Video';
-//import { BackgroundNosotros } from './components/Background-Image';
-//import { nosotrosImages } from '../config/bg_nosotros';
-import imagenFondo from '../../assets/portada-web.jpg'
+import imagenFondo from '../../assets/portada-web.webp'
 import { widthScreen } from '../hooks/widthScreen';
 
 interface AuthLayoutProps {

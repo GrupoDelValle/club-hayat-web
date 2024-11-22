@@ -18,7 +18,7 @@ import { Alert } from "../../pages/features/contacto/features/components/CustomA
 import { alertSwap } from "../../pages/features/contacto/features/hooks/alertSwap";
 import { SendMailStatus } from "../../service/config";
 
-import ImageContact from "../../../assets/gracias-por-contactarnos.jpg"
+import ImageContact from "../../../assets/gracias-por-contactarnos.webp"
 
 const Links = [
     () => {
@@ -265,7 +265,7 @@ export const Footer = () => {
                     <Typography color='#B8B8B8' fontSize={{xs: '20px',sm: '10px', md: '18px', lg: '15px',xl: '15px'}} paddingLeft={(width < 600) ? '60px' :'25px'} width='100%' sx={{ fontWeight: 'bold' }}>MAS INFORMACIÓN</Typography>
                     <Box justifyContent='center' display='flex' marginTop='10px'>
                         <iframe loading="lazy" width={isSmallScreen ? '70%' : '100%'} height={isSmallScreen ? '500px' : '350px'} style={{ border:1, maxWidth: isSmallScreen ? '60%' : '90%' }}
-                                src="https://youtube.com/embed/sapiVleNp68?si=sEoY2KQPDGtdiA3g" 
+                                src="https://youtube.com/embed/yNHSGpHh7lo" 
                                 title="Un mar de experiencias"
                         >Tu navegador no soporta el elemento de video 😞.</iframe>
                     </Box>

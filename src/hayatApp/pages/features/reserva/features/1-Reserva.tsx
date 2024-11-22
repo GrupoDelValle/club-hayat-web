@@ -20,7 +20,7 @@ export const Reserva1 = () => {
                 display: 'flex',
                 flexDirection: 'column',
                 justifyContent: 'center',
-                alignItems: 'center', // Centra el contenido horizontalmente
+                alignItems: 'center',
             }}
         >
             <img src={logoHayatVillas} alt="Logo" style={{width: '300px' }}/>

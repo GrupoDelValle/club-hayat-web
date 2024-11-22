@@ -159,7 +159,7 @@ export const Contacto1: React.FC<Contacto1Props> = ({ showForm, setShowForm }) =
                     label="Razón"
                 >
                     <MenuItem value={'membresia'}>Membresía</MenuItem>
-                    <MenuItem value={'suites'}>Suites y Penthouses</MenuItem>
+                    <MenuItem value={'lotes'}>Lotes</MenuItem>
                     <MenuItem value={'ambas'}>Ambas</MenuItem>
                 </Select>
             </FormControl>

@@ -7,7 +7,6 @@ import { widthScreen } from "../../../../hooks/widthScreen";
 import IkiLogo from '../../../../../assets/logo-iki.webp';
 import HayatLogo from '../../../../../assets/hayat-logo-bw.webp';
 import AudioFest from '../../../../../assets/logo-audiofest-blanco.webp';
-// import fondoNosotros from '../../../../../assets/nosotros-fondo.webp';
 
 import GrupoDelValleLogo from '../../../../../assets/grupo-del-valle-white.webp';
 import { AnimatedTypography } from "../../shared/AnimatedTypography";
