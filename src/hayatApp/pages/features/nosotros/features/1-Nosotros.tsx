@@ -122,6 +122,8 @@ export const Nosotros1 = () => {
                     {width < 640 ? <Box height='1%' /> : null}
                     <AnimatedTypography margin={ width<640 ? '0 0 0 10%' : '0 0 0 34%'} padding={(width < 900) ? '0 3% 0 0' : '0 15% 0 0'} display='flex' alignItems='center' color={'white'} fontWeight={'500'} fontSize={fontDirectionsText} > <TripOrigin sx={{fontSize: '20px', mr:'10px', color:'#DCA65E'}} /> Av. Luis Montero 390, Urb. Miraflores, Castilla - Piura</AnimatedTypography>
                     {width < 640 ? <Box height='1%' /> : null}
+                    <AnimatedTypography margin={ width<640 ? '0 0 0 10%' : '0 0 0 34%'} padding={(width < 900) ? '0 3% 0 0' : '0 15% 0 0'} display='flex' alignItems='center' color={'white'} fontWeight={'500'} fontSize={fontDirectionsText} > <TripOrigin sx={{fontSize: '20px', mr:'10px', color:'#DCA65E'}} /> Calle Morelli 217, Oficina 202, Segundo Piso, San Borja - Lima </AnimatedTypography>
+                    {width < 640 ? <Box height='1%' /> : null}
                     <AnimatedTypography margin={ width<640 ? '0 0 0 10%' : '0 0 0 34%'} padding={(width < 900) ? '0 3% 0 0' : '0 15% 0 0'} display='flex' alignItems='center' color={'white'} fontWeight={'500'} fontSize={fontDirectionsText} > <TripOrigin sx={{fontSize: '20px', mr:'10px', color:'#DCA65E'}} /> Calle José Santos Chocano 617, Urb. Umacollo - Arequipa </AnimatedTypography>
                     
                     <Typography m={width<640 ? '20px 0 0 10%' : '20px 0 0 34.5%'} fontWeight={'bold'} fontSize={fontTextSize} color='#DCA65E'> Contáctanos: </Typography>

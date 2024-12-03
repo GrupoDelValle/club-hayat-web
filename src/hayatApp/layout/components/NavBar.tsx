@@ -1,9 +1,8 @@
-import { AppBar, Box, Button, Grid2, IconButton, Toolbar, Typography } from '@mui/material';
+import { AppBar, Box, Button, IconButton, Toolbar, Typography } from '@mui/material';
 import Grid from '@mui/material/Grid2';
 import { MenuOutlined } from '@mui/icons-material';
 import { useEffect, useState, useRef } from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
-//import { useSelector } from 'react-redux';
 import EmailIcon from '@mui/icons-material/Email';
 import { MenuOptions } from '../../ui/config/menu-options';
 import '../../ui/css/CustomRoundedButton.css';
@@ -24,11 +23,10 @@ interface NavBarProps {
 
 export const NavBar: React.FC<NavBarProps> = ({onToggleSidebar, showForm, setShowForm, isSidebarOpen}) => {
     const { width } = widthScreen();
-    //const indexNav = useSelector((state: RootState) => state.nabBar.index);
     const sectionIds = MenuOptions.map(option => option.url);
     const activeSection = useSectionObserver(sectionIds);
     const [showAppBar, setShowAppBar] = useState(true);
-    const [backgroundColor, setBackgroundColor] = useState('transparent'); // Nuevo estado para fondo
+    const [backgroundColor, setBackgroundColor] = useState('transparent');
     
 
     const componentRef = useRef<HTMLDivElement | null>(null); // Crear referencia para el contenedor

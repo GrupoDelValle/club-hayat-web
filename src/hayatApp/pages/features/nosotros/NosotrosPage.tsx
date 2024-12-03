@@ -4,7 +4,6 @@ import { loadingScreenHook } from '../../../hooks/loadingWait';
 import { LoadingScreen } from '../../../ui/components/LoadingScreen';
 
 export const NosotrosPage = () => {
-// const { theme } = useSelector( (state: RootState) => state.theme );
   const { isLoading } = loadingScreenHook();
   return ((isLoading) 
   ? <LoadingScreen/> 
